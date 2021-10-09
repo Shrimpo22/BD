@@ -1,0 +1,275 @@
+format 224
+"Consultas" // Consultas
+  revision 1
+  modified_by 22 "vascoaraujo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  classview 128022 "Consultas"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128022 "Consultas"
+      classdiagramsettings show_members_full_definition yes show_members_stereotype yes member_max_width 0 end
+      size Legal-Landscape
+    end
+
+    class 128022 "Especialidade"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128022 "CodEspecialidade"
+	private explicit_type "integer"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128150 "Designacao"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128022 // (EspecialidadeConsulta)
+	relation 128022 ---- name "EspecialidadeConsulta"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 128022 // (EspecialidadeConsulta)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 128150 // (EspecialidadeConsulta)
+      end
+
+      classrelation 128534 // (EspecialidadeMedico)
+	relation 128278 ---- name "EspecialidadeMedico"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 128534 // (EspecialidadeMedico)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 128662 // (EspecialidadeMedico)
+      end
+    end
+
+    class 128150 "Consulta"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128278 "NumeroCons"
+	private explicit_type "integer"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128406 "Data"
+	private explicit_type "date"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128534 "Valor"
+	private explicit_type "Decimal(4.2)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128150 // (EspecialidadeConsulta)
+	relation_ref 128022 // EspecialidadeConsulta
+      end
+
+      classrelation 128278 // PacienteConsulta (<association>)
+	relation 128150 ----
+	  a role_name "PacienteConsulta" multiplicity "1" private
+	    classrelation_ref 128278 // PacienteConsulta (<association>)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 128406 // <association>
+      end
+
+      classrelation 128790 // (MedicoConsulta)
+	relation 128406 ---- name "MedicoConsulta"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 128790 // (MedicoConsulta)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 128918 // (MedicoConsulta)
+      end
+    end
+
+    class 128278 "Paciente"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128662 "NumPaciente"
+	private explicit_type "integer"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128790 "Nome"
+	private explicit_type "varchar[200]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128918 "Morada"
+	private explicit_type "text"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128406 // <association>
+	relation_ref 128150 // <association>
+      end
+    end
+
+    class 128406 "Medico"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129046 "NumFuncionario"
+	private explicit_type "integer"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129174 "Nome"
+	private explicit_type "varchar[200]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129302 "Morada"
+	private explicit_type "text"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128662 // (EspecialidadeMedico)
+	relation_ref 128278 // EspecialidadeMedico
+      end
+
+      classrelation 128918 // (MedicoConsulta)
+	relation_ref 128406 // MedicoConsulta
+      end
+    end
+  end
+end

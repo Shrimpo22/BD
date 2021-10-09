@@ -1,0 +1,354 @@
+format 224
+"Alunos" // Alunos
+  revision 1
+  modified_by 22 "vascoaraujo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  classview 128022 "Alunos"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128022 "Alunos"
+      classdiagramsettings draw_all_relations no show_members_full_definition yes show_members_stereotype yes member_max_width 0 end
+      size Ledger
+    end
+
+    class 128022 "Alunos"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128022 "Numero"
+	private explicit_type "integer"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128150 "Nome"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128278 "Morada"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128022 // (NotaUC)
+	relation 128022 ---- name "NotaUC"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 128022 // (NotaUC)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 128150 // (NotaUC)
+	  association_type class_ref 128662 // NotaUC
+      end
+
+      classrelation 128790 // (inscricao)
+	relation 128406 ---- name "inscricao"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 128790 // (inscricao)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 128918 // (inscricao)
+	  association_type class_ref 128406 // Inscricao
+      end
+
+      classrelation 129302 // <association>
+	relation 128662 ----
+	  a role_name "" private
+	    classrelation_ref 129302 // <association>
+	  b role_name "" private
+	    classrelation_ref 129430 // <association>
+      end
+
+      classrelation 129558 // (matricula-se)
+	relation 128790 ---- name "matricula-se"
+	  a role_name "" multiplicity "0..1" private
+	    classrelation_ref 129558 // (matricula-se)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 129686 // (matricula-se)
+      end
+    end
+
+    class 128150 "Avaliacao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128406 "Data"
+	private explicit_type "date"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128534 "Hora"
+	private explicit_type "integer"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128662 "Local"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128662 // (AvaliacaoUC)
+	relation_ref 128278 // AvaliacaoUC
+      end
+
+      classrelation 128918 // (inscricao)
+	relation_ref 128406 // inscricao
+      end
+    end
+
+    class 128278 "UC"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128790 "SiglaUC"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128918 "Designacao"
+	private explicit_type "text"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128150 // (NotaUC)
+	relation_ref 128022 // NotaUC
+      end
+
+      classrelation 128534 // (AvaliacaoUC)
+	relation 128278 *--- name "AvaliacaoUC"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 128534 // (AvaliacaoUC)
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 128662 // (AvaliacaoUC)
+      end
+
+      classrelation 129046 // (UCLIC)
+	relation 128534 ---- name "UCLIC"
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 129046 // (UCLIC)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 129174 // (UCLIC)
+	  association_type class_ref 128790 // UCLIC
+      end
+    end
+
+    class 128406 "Inscricao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129046 "Nota"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128534 "Licenciatura"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129174 "SiglaLIC"
+	private explicit_type "varchar[6]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129302 "Designacao"
+	private explicit_type "text"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129174 // (UCLIC)
+	relation_ref 128534 // UCLIC
+      end
+
+      classrelation 129430 // <association>
+	relation_ref 128662 // <association>
+      end
+
+      classrelation 129686 // (matricula-se)
+	relation_ref 128790 // matricula-se
+      end
+    end
+
+    class 128662 "NotaUC"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129430 "Nota"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128790 "UCLIC"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129558 "AnoLetivo"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+  end
+end

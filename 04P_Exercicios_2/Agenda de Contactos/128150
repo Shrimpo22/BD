@@ -1,0 +1,359 @@
+format 224
+"AgendaDeContactos" // AgendaDeContactos
+  revision 2
+  modified_by 22 "vascoaraujo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  classview 128150 "AgendaDeContactos"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128150 "AgendaDeContactos"
+      classdiagramsettings draw_all_relations no show_members_full_definition yes show_members_stereotype yes member_max_width 0 end
+      size Ledger
+    end
+
+    class 128278 "Investigadores"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128150 "Nome"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128278 "Morada"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128406 "GrauAcademico"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128150 // <association>
+	relation 128150 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 128150 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 128278 // <association>
+      end
+
+      classrelation 128790 // (InvOrg)
+	relation 128662 ---- name "InvOrg"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 128790 // (InvOrg)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 128918 // (InvOrg)
+	  association_type class_ref 128918 // InvOrg
+      end
+
+      classrelation 129174 // ()
+	relation_ref 128790 // 
+      end
+
+      classrelation 129430 // <association>
+	relation_ref 128918 // <association>
+      end
+    end
+
+    class 128406 "Pais"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128278 // <association>
+	relation_ref 128150 // <association>
+      end
+    end
+
+    class 128534 "PaisUniaoEuropeia"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128534 // <generalisation>
+	relation 128406 ---|>
+	  a public
+	    classrelation_ref 128534 // <generalisation>
+	  b parent class_ref 128406 // Pais
+      end
+
+      attribute 129558 "SistemaECTS"
+	private explicit_type "boolean"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128790 "Organismos"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128534 "Nome"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128662 "Designacao"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128918 // (InvOrg)
+	relation_ref 128662 // InvOrg
+      end
+    end
+
+    class 128918 "InvOrg"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129558 // (InvOrgPeriodo)
+	relation 129046 ---- name "InvOrgPeriodo"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 129558 // (InvOrgPeriodo)
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 129686 // (InvOrgPeriodo)
+	  association_type class_ref 129558 // InvOrgPeriodo
+      end
+    end
+
+    class 129046 "GrauAcademico"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129046 // ()
+	relation 128790 ---- name ""
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 129046 // ()
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 129174 // ()
+      end
+    end
+
+    class 129174 "Areas"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129046 "Nome"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129174 "Designacao"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129302 // <association>
+	relation 128918 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 129302 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 129430 // <association>
+      end
+    end
+
+    class 129302 "Periodo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129302 "DataDeInicio"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129430 "DataDeFim"
+	private explicit_type "varchar[100]"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129686 // (InvOrgPeriodo)
+	relation_ref 129046 // InvOrgPeriodo
+      end
+    end
+
+    class 129430 "Funcao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129942 // <association>
+	relation_ref 129174 // <association>
+      end
+    end
+
+    class 129558 "InvOrgPeriodo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129814 // <association>
+	relation 129174 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 129814 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 129942 // <association>
+      end
+    end
+  end
+end

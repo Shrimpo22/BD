@@ -1,0 +1,18 @@
+window_sizes 677 705 320 351 548 104
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128022 // Alunos
+    1040 556 100 Ledger 0 0
+end
+show_stereotypes
+selected attribute_ref 129558 // AnoLetivo
+open
+  class_ref 128022 // Alunos
+  class_ref 128150 // Avaliacao
+  class_ref 128278 // UC
+  class_ref 128406 // Inscricao
+  class_ref 128534 // Licenciatura
+  class_ref 128662 // NotaUC
+  class_ref 128790 // UCLIC
+end
+end

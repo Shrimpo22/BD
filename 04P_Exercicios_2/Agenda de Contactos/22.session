@@ -1,0 +1,18 @@
+window_sizes 677 705 320 351 548 104
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128150 // AgendaDeContactos
+    900 528 102 Ledger 0 0
+end
+show_stereotypes
+selected attribute_ref 129558 // SistemaECTS
+open
+  class_ref 128278 // Investigadores
+  class_ref 128406 // Pais
+  class_ref 128534 // PaisUniaoEuropeia
+  class_ref 128790 // Organismos
+  class_ref 128918 // InvOrg
+  class_ref 129174 // Areas
+  class_ref 129302 // Periodo
+end
+end

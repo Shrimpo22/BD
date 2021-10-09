@@ -1,0 +1,12 @@
+window_sizes 677 705 320 351 549 104
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128002 // Alunos
+    1040 557 100 A3-Landscape 0 0
+end
+show_stereotypes
+selected attribute_ref 128022 // Ano
+open
+  class_ref 128514 // PlanoCurric
+end
+end

@@ -1,0 +1,66 @@
+format 224
+
+classcanvas 128022 class_ref 128022 // Alunos
+  classdiagramsettings member_max_width 0 end
+  xyz 109 128 2000
+end
+classcanvas 128150 class_ref 128150 // Avaliacao
+  classdiagramsettings member_max_width 0 end
+  xyz 471 284 2000
+end
+classcanvas 128278 class_ref 128278 // UC
+  classdiagramsettings member_max_width 0 end
+  xyz 461 137 2000
+end
+classcanvas 128918 class_ref 128406 // Inscricao
+  classdiagramsettings member_max_width 0 end
+  xyz 278 306 2000
+end
+classcanvas 129174 class_ref 128534 // Licenciatura
+  classdiagramsettings member_max_width 0 end
+  xyz 767 137 2000
+end
+classcanvas 130326 class_ref 128662 // NotaUC
+  classdiagramsettings member_max_width 0 end
+  xyz 362 77 2000
+end
+classcanvas 130582 class_ref 128790 // UCLIC
+  classdiagramsettings member_max_width 0 end
+  xyz 639 216 2000
+end
+relationcanvas 128406 relation_ref 128022 // NotaUC
+  from ref 128022 z 2001 label "NotaUC" italic max_width 255 xyz 370 170 3000 to ref 128278
+  no_role_a no_role_b
+  multiplicity_a_pos 445 175 3000 multiplicity_b_pos 337 175 3000
+end
+relationcanvas 128662 relation_ref 128278 // AvaliacaoUC
+  from ref 128278 z 2001 label "AvaliacaoUC" italic max_width 255 xyz 496 235 3000 to ref 128150
+  no_role_a no_role_b
+  multiplicity_a_pos 519 265 3000 multiplicity_b_pos 517 208 3000
+end
+relationcanvas 128790 relation_ref 128406 // inscricao
+  decenter_begin 515
+  decenter_end 592
+  from ref 128022 z 2001 label "inscricao" italic max_width 255 xyz 334 247 3000 to ref 128150
+  no_role_a no_role_b
+  multiplicity_a_pos 455 342 3000 multiplicity_b_pos 231 219 3000
+end
+relationcanvas 129302 relation_ref 128534 // UCLIC
+  from ref 128278 z 2001 label "UCLIC" italic max_width 255 xyz 666 155 3000 to ref 129174
+  no_role_a no_role_b
+  multiplicity_a_pos 749 176 3000 multiplicity_b_pos 617 176 3000
+end
+relationcanvas 129814 relation_ref 128790 // matricula-se
+  from ref 128022 z 2001 label "matricula-se" italic max_width 255 xyz 493 34 3000 to point 215 53
+  line 129942 z 2001 to point 831 53
+  line 130070 z 2001 to ref 129174
+  no_role_a no_role_b
+  multiplicity_a_pos 801 118 3000 multiplicity_b_pos 202 109 3000
+end
+line 129046 -_-_ decenter_end 507
+  from ref 128790 z 2002 to ref 128918
+line 130454 -_-_
+  from ref 130326 z 2002 to ref 128406
+line 130710 -_-_
+  from ref 129302 z 2002 to ref 130582
+end
