@@ -1,0 +1,20 @@
+window_sizes 1920 1017 291 1624 867 104
+
+diagrams
+  active  classdiagram_ref 128022 // Projecto Biblioteca
+    1624 867 115 Ledger 0 0
+end
+show_stereotypes
+marked
+  classrelation_ref 134678 // <generalisation>
+end
+selected 
+package_ref 129 // ProjetoBibliotecaGrupo06
+open
+  class_ref 129174 // Artigo
+  class_ref 136982 // LivroEdicao
+  class_ref 143510 // PublicacaoArea
+  class_ref 143638 // Relevancia
+  class_ref 144150 // Feeds
+end
+end

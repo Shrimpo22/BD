@@ -1,0 +1,871 @@
+format 224
+"Projecto Biblioteca" // Projecto Biblioteca
+  revision 6
+  modified_by 22 "vasco"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  classview 128022 "Projecto Biblioteca"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128022 "Projecto Biblioteca"
+      classdiagramsettings draw_all_relations no show_members_full_definition yes show_members_stereotype yes member_max_width 0 end
+      size Ledger
+    end
+
+    class 128022 "Publicacao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 134550 "ID"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 134678 "Titulo"
+	private explicit_type "varchar(100)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 134806 "Subtitulo"
+	private explicit_type "varchar(100)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 134934 "Titulo_Abreviado"
+	private explicit_type "varchar(50)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135062 "Descricao"
+	private explicit_type "text"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 136854 // <association>
+	relation_ref 136214 // <association>
+      end
+
+      classrelation 137110 // <association>
+	relation_ref 136342 // <association>
+      end
+
+      attribute 135190 "NumPaginas"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135318 "DataPub"
+	private explicit_type "date"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 137238 // <association>
+	relation 136470 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 137238 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 137366 // <association>
+      end
+
+      classrelation 137622 // <association>
+	relation_ref 136598 // <association>
+      end
+
+      classrelation 144918 // <association>
+	relation 143510 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 144918 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 145046 // <association>
+	  association_type class_ref 143510 // PublicacaoArea
+      end
+
+      attribute 142486 "NumEmp"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 142614 "DataAqui"
+	private explicit_type "date"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 145558 // <association>
+	relation_ref 143766 // <association>
+      end
+    end
+
+    class 128150 "Periodico"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134550 // <generalisation>
+	relation 134550 ---|>
+	  a public
+	    classrelation_ref 134550 // <generalisation>
+	  b parent class_ref 128022 // Publicacao
+      end
+
+      attribute 135830 "ISSN"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 146710 // <composition>
+	relation 144406 *---
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 146710 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 146838 // <composition>
+      end
+
+      classrelation 149654 // <composition>
+	relation_ref 145814 // <composition>
+      end
+
+      classrelation 149782 // <composition>
+	relation 145942 *---
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 149782 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 149910 // <composition>
+      end
+
+      classrelation 150678 // <association>
+	relation_ref 146326 // <association>
+      end
+    end
+
+    class 128278 "Revista"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134806 // <generalisation>
+	relation 134806 ---|>
+	  a public
+	    classrelation_ref 134806 // <generalisation>
+	  b parent class_ref 128150 // Periodico
+      end
+    end
+
+    class 128406 "Jornal"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134934 // <generalisation>
+	relation 134934 ---|>
+	  a public
+	    classrelation_ref 134934 // <generalisation>
+	  b parent class_ref 128150 // Periodico
+      end
+    end
+
+    class 128534 "Livro"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128022 // <generalisation>
+	relation 128022 ---|>
+	  a public
+	    classrelation_ref 128022 // <generalisation>
+	  b parent class_ref 128022 // Publicacao
+      end
+
+      classrelation 137750 // <association>
+	relation 136726 ----
+	  a role_name "" private
+	    classrelation_ref 137750 // <association>
+	  b role_name "" private
+	    classrelation_ref 137878 // <association>
+      end
+
+      classrelation 147094 // <composition>
+	relation_ref 144534 // <composition>
+      end
+
+      classrelation 147222 // <composition>
+	relation 144662 *---
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 147222 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 147350 // <composition>
+      end
+
+      classrelation 148886 // <composition>
+	relation_ref 145430 // <composition>
+      end
+
+      classrelation 149142 // <composition>
+	relation_ref 145558 // <composition>
+      end
+
+      classrelation 149270 // <composition>
+	relation 145686 *---
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 149270 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 149398 // <composition>
+	  association_type class_ref 136982 // LivroEdicao
+      end
+    end
+
+    class 128662 "Editora"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 137366 // <association>
+	relation_ref 136470 // <association>
+      end
+
+      classrelation 150934 // <association>
+	relation_ref 146454 // <association>
+      end
+    end
+
+    class 128790 "Edicao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136982 // <association>
+	relation 136342 ----
+	  a role_name "" private
+	    classrelation_ref 136982 // <association>
+	  b role_name "" private
+	    classrelation_ref 137110 // <association>
+      end
+
+      classrelation 137878 // <association>
+	relation_ref 136726 // <association>
+      end
+
+      classrelation 148758 // <composition>
+	relation 145430 *---
+	  a role_name "" private
+	    classrelation_ref 148758 // <composition>
+	  b role_name "" private
+	    classrelation_ref 148886 // <composition>
+      end
+
+      classrelation 149014 // <composition>
+	relation 145558 *---
+	  a role_name "" private
+	    classrelation_ref 149014 // <composition>
+	  b role_name "" private
+	    classrelation_ref 149142 // <composition>
+      end
+
+      classrelation 149398 // <composition>
+	relation_ref 145686 // <composition>
+      end
+
+      classrelation 149526 // <composition>
+	relation 145814 *---
+	  a role_name "" private
+	    classrelation_ref 149526 // <composition>
+	  b role_name "" private
+	    classrelation_ref 149654 // <composition>
+      end
+
+      classrelation 149910 // <composition>
+	relation_ref 145942 // <composition>
+      end
+    end
+
+    class 128918 "Autor"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136726 // <association>
+	relation 136214 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 136726 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 136854 // <association>
+      end
+    end
+
+    class 129046 "Capitulo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 146966 // <composition>
+	relation 144534 *---
+	  a role_name "" private
+	    classrelation_ref 146966 // <composition>
+	  b role_name "" private
+	    classrelation_ref 147094 // <composition>
+      end
+
+      classrelation 147350 // <composition>
+	relation_ref 144662 // <composition>
+      end
+
+      classrelation 147990 // <association>
+	relation 145046 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 147990 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 148118 // <association>
+      end
+
+      classrelation 148374 // <association>
+	relation_ref 145174 // <association>
+      end
+    end
+
+    class 129174 "Artigo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 146838 // <composition>
+	relation_ref 144406 // <composition>
+      end
+
+      classrelation 147478 // <association>
+	relation 144790 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 147478 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 147606 // <association>
+      end
+
+      classrelation 147734 // <association>
+	relation 144918 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 147734 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 147862 // <association>
+      end
+    end
+
+    class 129302 "Capa"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 135446 "Miniatura"
+	private explicit_type "image"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135574 "Ampliada"
+	private explicit_type "image"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 137494 // <association>
+	relation 136598 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 137494 // <association>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 137622 // <association>
+      end
+    end
+
+    class 129430 "Area_Tematica"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 138262 // <association>
+	relation 136982 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 138262 // <association>
+	  b role_name "" multiplicity "0..1" private
+	    classrelation_ref 138390 // <association>
+      end
+
+      classrelation 138390 // <association>
+	relation_ref 136982 // <association>
+      end
+
+      classrelation 145046 // <association>
+	relation_ref 143510 // <association>
+      end
+
+      classrelation 147862 // <association>
+	relation_ref 144918 // <association>
+      end
+
+      classrelation 148246 // <association>
+	relation 145174 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 148246 // <association>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 148374 // <association>
+      end
+    end
+
+    class 129558 "Palavra_Chave"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 145430 // <association>
+	relation 143766 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 145430 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 145558 // <association>
+      end
+
+      classrelation 147606 // <association>
+	relation_ref 144790 // <association>
+      end
+
+      classrelation 148118 // <association>
+	relation_ref 145046 // <association>
+      end
+    end
+
+    class 129686 "Monografia"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134678 // <generalisation>
+	relation 134678 ---|>
+	  a public
+	    classrelation_ref 134678 // <generalisation>
+	  b parent class_ref 128022 // Publicacao
+      end
+    end
+
+    class 136214 "Dissertacao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135318 // <generalisation>
+	relation 135318 ---|>
+	  a public
+	    classrelation_ref 135318 // <generalisation>
+	  b parent class_ref 129686 // Monografia
+      end
+
+      classrelation 150166 // <association>
+	relation_ref 146070 // <association>
+      end
+
+      classrelation 150294 // <association>
+	relation 146198 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 150294 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 150422 // <association>
+      end
+    end
+
+    class 136598 "Relatorios_Tecnicos"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135446 // <generalisation>
+	relation 135446 ---|>
+	  a public
+	    classrelation_ref 135446 // <generalisation>
+	  b parent class_ref 129686 // Monografia
+      end
+
+      classrelation 136086 // <association>
+	relation_ref 135830 // <association>
+      end
+    end
+
+    class 136726 "Textos_Pedagocicos"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135574 // <generalisation>
+	relation 135574 ---|>
+	  a public
+	    classrelation_ref 135574 // <generalisation>
+	  b parent class_ref 129686 // Monografia
+      end
+
+      classrelation 135702 // <association>
+	relation 135702 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 135702 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 135830 // <association>
+      end
+    end
+
+    class 136854 "Tema"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135830 // <association>
+	relation_ref 135702 // <association>
+      end
+
+      classrelation 135958 // <association>
+	relation 135830 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 135958 // <association>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 136086 // <association>
+      end
+
+      classrelation 150422 // <association>
+	relation_ref 146198 // <association>
+      end
+    end
+
+    class 136982 "LivroEdicao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 135702 "ISBN"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 143510 "PublicacaoArea"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 145302 // <association>
+	relation_ref 143638 // <association>
+      end
+    end
+
+    class 143638 "Relevancia"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 145174 // <association>
+	relation 143638 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 145174 // <association>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 145302 // <association>
+      end
+    end
+
+    class 143894 "Tipo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 150038 // <association>
+	relation 146070 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 150038 // <association>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 150166 // <association>
+      end
+    end
+
+    class 144022 "Periodicidade"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 150550 // <association>
+	relation 146326 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 150550 // <association>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 150678 // <association>
+	  association_type class_ref 144278 // PeriodicidadePeriodico
+      end
+    end
+
+    class 144150 "Feeds"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 150806 // <association>
+	relation 146454 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 150806 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 150934 // <association>
+      end
+
+      classrelation 151318 // <association>
+	relation 146710 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 151318 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 151446 // <association>
+      end
+    end
+
+    class 144278 "PeriodicidadePeriodico"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 151446 // <association>
+	relation_ref 146710 // <association>
+      end
+    end
+  end
+end
