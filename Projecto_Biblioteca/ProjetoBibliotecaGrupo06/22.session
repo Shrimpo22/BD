@@ -1,8 +1,8 @@
-window_sizes 1920 1017 0 1915 971 0
-
+window_sizes 1366 713 0 1360 661 0
+cleanlooks_style
 diagrams
   active  classdiagram_ref 128022 // Projecto Biblioteca
-    1915 971 104 Ledger 0 0
+    1915 971 54 Ledger 0 0
 end
 show_stereotypes
 marked
