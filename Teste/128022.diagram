@@ -1,0 +1,52 @@
+format 224
+
+classcanvas 128022 class_ref 128022 // Pub
+  classdiagramsettings member_max_width 0 end
+  xyz 42 229 2000
+end
+classcanvas 128150 class_ref 128150 // Livro
+  classdiagramsettings member_max_width 0 end
+  xyz 263 233 2000
+end
+classcanvas 128790 class_ref 128278 // Edicao
+  classdiagramsettings member_max_width 0 end
+  xyz 567 231 2000
+end
+classcanvas 129302 class_ref 128406 // Piso
+  classdiagramsettings member_max_width 0 end
+  xyz 70 466 2000
+end
+classcanvas 129430 class_ref 128534 // Armario
+  classdiagramsettings member_max_width 0 end
+  xyz 273 472 2000
+end
+classcanvas 129558 class_ref 128662 // Prateleira
+  classdiagramsettings member_max_width 0 end
+  xyz 563 476 2000
+end
+relationcanvas 129046 relation_ref 128150 // <generalisation>
+  from ref 128150 z 2001 to ref 128022
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129174 relation_ref 128278 // <composition>
+  from ref 128150 z 2001 to ref 128790
+  no_role_a no_role_b
+  multiplicity_a_pos 552 257 3000 multiplicity_b_pos 317 258 3000
+end
+relationcanvas 129686 relation_ref 128406 // <composition>
+  from ref 129302 z 2001 to ref 129430
+  no_role_a no_role_b
+  multiplicity_a_pos 258 499 3000 multiplicity_b_pos 226 498 3000
+end
+relationcanvas 129814 relation_ref 128534 // <composition>
+  from ref 129430 z 2001 to ref 129558
+  no_role_a no_role_b
+  multiplicity_a_pos 548 502 3000 multiplicity_b_pos 447 502 3000
+end
+relationcanvas 129942 relation_ref 128662 // <association>
+  from ref 128790 z 2001 to ref 129558
+  no_role_a no_role_b
+  multiplicity_a_pos 578 457 3000 multiplicity_b_pos 576 276 3000
+end
+end

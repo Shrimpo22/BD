@@ -1,0 +1,16 @@
+window_sizes 1800 910 450 1345 760 104
+
+diagrams
+  active  classdiagram_ref 128022 // a
+    1345 760 100 A4 0 0
+end
+show_stereotypes
+selected classview_ref 128022 // Teste
+open
+  class_ref 128150 // Livro
+  class_ref 128278 // Edicao
+  class_ref 128406 // Piso
+  class_ref 128534 // Armario
+  class_ref 128662 // Prateleira
+end
+end

@@ -1,0 +1,215 @@
+format 224
+"Teste" // Teste
+  revision 4
+  modified_by 22 "vasco"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  classview 128022 "Teste"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128022 "a"
+      classdiagramsettings show_members_full_definition yes show_members_stereotype yes member_max_width 0 end
+      size A4
+    end
+
+    class 128022 "Pub"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128022 "AID"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128150 "Livro"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128278 // <generalisation>
+	relation 128150 ---|>
+	  a public
+	    classrelation_ref 128278 // <generalisation>
+	  b parent class_ref 128022 // Pub
+      end
+
+      classrelation 128406 // <composition>
+	relation 128278 *---
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 128406 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 128534 // <composition>
+      end
+    end
+
+    class 128278 "Edicao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128534 // <composition>
+	relation_ref 128278 // <composition>
+      end
+
+      classrelation 129174 // <association>
+	relation 128662 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 129174 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 129302 // <association>
+      end
+    end
+
+    class 128406 "Piso"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128662 // <composition>
+	relation 128406 *---
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 128662 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 128790 // <composition>
+      end
+
+      attribute 134678 "PisoID"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128534 "Armario"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128790 // <composition>
+	relation_ref 128406 // <composition>
+      end
+
+      classrelation 128918 // <composition>
+	relation 128534 *---
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 128918 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 129046 // <composition>
+      end
+
+      attribute 134806 "ArmarioId"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128662 "Prateleira"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129046 // <composition>
+	relation_ref 128534 // <composition>
+      end
+
+      classrelation 129302 // <association>
+	relation_ref 128662 // <association>
+      end
+    end
+  end
+end
