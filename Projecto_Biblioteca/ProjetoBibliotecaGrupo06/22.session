@@ -2,21 +2,19 @@ window_sizes 1920 1017 219 1696 971 0
 
 diagrams
   active  classdiagram_ref 128022 // Projecto Biblioteca
-    1696 971 92 A0-Landscape 216 0
-
+    1696 971 86 A0-Landscape 0 0
 end
 show_stereotypes
 marked
   classrelation_ref 134678 // <generalisation>
-  attribute_ref 150550 // Requisitavel
   attribute_ref 150422 // Requisitado
 end
-
+selected 
+package_ref 129 // ProjetoBibliotecaGrupo06
 open
   class_ref 136982 // LivroEdicao
   class_ref 151062 // PeriodicoEdicao
   class_ref 159126 // Configuracoes
   class_ref 159382 // Emprestavel
-
 end
 end
