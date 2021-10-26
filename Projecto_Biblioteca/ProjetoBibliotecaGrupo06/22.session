@@ -1,18 +1,30 @@
-window_sizes 1366 713 0 1360 661 0
-cleanlooks_style
+window_sizes 1920 1017 219 1696 971 0
+
 diagrams
   active  classdiagram_ref 128022 // Projecto Biblioteca
-    1915 971 54 Ledger 0 0
+    1696 971 80 A0-Landscape 128 0
 end
 show_stereotypes
-marked
-  classrelation_ref 134678 // <generalisation>
-  attribute_ref 150550 // Requisitavel
-  attribute_ref 150422 // Requisitado
-end
-selected class_ref 152598 // ListaDeLeitura
+selected attribute_ref 176278 // ReservaNum
 open
-  class_ref 128278 // Revista
+  class_ref 128150 // Periodico
+  class_ref 128406 // Jornal
+  class_ref 128790 // Edicao
+  class_ref 129046 // Capitulo
+  class_ref 129430 // Area_Tematica
+  class_ref 136214 // Dissertacao
+  class_ref 136598 // Relatorios_Tecnicos
+  class_ref 136726 // Textos_Pedagocicos
+  class_ref 136854 // Tema
+  class_ref 143638 // Relevancia
+  class_ref 143894 // Tipo
+  class_ref 151318 // Reserva
+  class_ref 151702 // Periodo
+  class_ref 151830 // Piso
   class_ref 151958 // Armario
+  class_ref 152086 // Prateleira
+  class_ref 152470 // EstadoDeConservacao
+  class_ref 159382 // EdicaoEmprestavel
+  class_ref 166038 // RFID
 end
 end
