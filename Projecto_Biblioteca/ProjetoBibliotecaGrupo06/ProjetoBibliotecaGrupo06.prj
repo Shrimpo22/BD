@@ -1,6 +1,6 @@
 format 224
 "ProjetoBibliotecaGrupo06"
-  revision 2
+  revision 3
   modified_by 22 "vasco"
 
 
@@ -44,5 +44,18 @@ format 224
 
   mark_for_import
   
+  ncouples 12
+  key "gxmi path" value "C:/Users/vasco/Desktop/LIXOOOOOOOOOO.xmi"
+  key "gxmi no model" value "no"
+  key "gxmi gen views" value "no"
+  key "gxmi encoding" value "UTF-8"
+  key "gxmi umlversion" value "23"
+  key "gxmi pk prefix" value "no"
+  key "gxmi vis prefix" value "no"
+  key "gxmi primitive type" value "no"
+  key "gxmi gen extensions" value "yes"
+  key "gxmi gen eclipse" value "no"
+  key "gxmi comment exporter" value "no"
+  key "gxmi linefeed" value "no"
   package_ref 128022 // Projecto Biblioteca
 end
