@@ -1,6 +1,6 @@
 format 224
 "ProjetoBibliotecaGrupo06"
-  revision 3
+  revision 4
   modified_by 22 "vasco"
 
 
@@ -45,7 +45,7 @@ format 224
   mark_for_import
   
   ncouples 12
-  key "gxmi path" value "C:/Users/vasco/Desktop/LIXOOOOOOOOOO.xmi"
+  key "gxmi path" value "C:/Users/vasco/Desktop/ETAR.xmi"
   key "gxmi no model" value "no"
   key "gxmi gen views" value "no"
   key "gxmi encoding" value "UTF-8"

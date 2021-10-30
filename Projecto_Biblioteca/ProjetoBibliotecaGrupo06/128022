@@ -1,6 +1,6 @@
 format 224
 "Projecto Biblioteca" // Projecto Biblioteca
-  revision 13
+  revision 15
   modified_by 22 "vasco"
   // class settings
   
@@ -159,12 +159,12 @@ format 224
 	relation_ref 136598 // <association>
       end
 
-      classrelation 144918 // <association>
-	relation 143510 ----
-	  a role_name "" multiplicity "1" private
-	    classrelation_ref 144918 // <association>
+      classrelation 144918 // (PublicacaoArea)
+	relation 143510 ---- name "PublicacaoArea"
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 144918 // (PublicacaoArea)
 	  b role_name "" multiplicity "*" private
-	    classrelation_ref 145046 // <association>
+	    classrelation_ref 145046 // (PublicacaoArea)
 	  association_type class_ref 143510 // PublicacaoArea
       end
 
@@ -192,10 +192,6 @@ format 224
 
       classrelation 145558 // PalavraChavePub
 	relation_ref 143766 // PalavraChavePub
-      end
-
-      classrelation 180374 // <association>
-	relation_ref 171030 // <association>
       end
 
       classrelation 194966 // <association>
@@ -235,20 +231,20 @@ format 224
 	MysqlColumn
       end
 
-      classrelation 146710 // ()
-	relation 144406 *--- name ""
+      classrelation 146710 // <composition>
+	relation 144406 *---
 	  a role_name "" multiplicity "*" private
-	    classrelation_ref 146710 // ()
+	    classrelation_ref 146710 // <composition>
 	  b role_name "" multiplicity "1" private
-	    classrelation_ref 146838 // ()
+	    classrelation_ref 146838 // <composition>
       end
 
-      classrelation 149782 // (PeriodicoEdicao)
-	relation 145942 *--- name "PeriodicoEdicao"
+      classrelation 149782 // <composition>
+	relation 145942 *---
 	  a role_name "" multiplicity "*" private
-	    classrelation_ref 149782 // (PeriodicoEdicao)
+	    classrelation_ref 149782 // <composition>
 	  b role_name "" multiplicity "1" private
-	    classrelation_ref 149910 // (PeriodicoEdicao)
+	    classrelation_ref 149910 // <composition>
 	  association_explicit_type "PeriodicoEdicao"
       end
 
@@ -321,10 +317,6 @@ format 224
 	  b parent class_ref 128022 // Publicacao
       end
 
-      classrelation 147094 // <composition>
-	relation_ref 144534 // <composition>
-      end
-
       classrelation 147222 // <composition>
 	relation 144662 *---
 	  a role_name "" multiplicity "*" private
@@ -333,17 +325,12 @@ format 224
 	    classrelation_ref 147350 // <composition>
       end
 
-      classrelation 149270 // (LivroEdicao)
-	relation 145686 *--- name "LivroEdicao"
+      classrelation 202518 // <composition>
+	relation 191894 *---
 	  a role_name "" multiplicity "*" private
-	    classrelation_ref 149270 // (LivroEdicao)
+	    classrelation_ref 202518 // <composition>
 	  b role_name "" multiplicity "1" private
-	    classrelation_ref 149398 // (LivroEdicao)
-	  association_type class_ref 136982 // LivroEdicao
-      end
-
-      classrelation 172182 // <association>
-	relation_ref 163606 // <association>
+	    classrelation_ref 202646 // <composition>
       end
     end
 
@@ -389,7 +376,7 @@ format 224
       end
     end
 
-    class 128790 "Edicao"
+    class 128790 "PeriodicoEdicao"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -399,12 +386,8 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 149398 // (LivroEdicao)
-	relation_ref 145686 // LivroEdicao
-      end
-
-      classrelation 149910 // (PeriodicoEdicao)
-	relation_ref 145942 // PeriodicoEdicao
+      classrelation 149910 // <composition>
+	relation_ref 145942 // <composition>
       end
 
       classrelation 187158 // <association>
@@ -421,14 +404,6 @@ format 224
 	    classrelation_ref 187670 // <aggregation>
 	  b role_name "" multiplicity "1" private
 	    classrelation_ref 187798 // <aggregation>
-      end
-
-      classrelation 187926 // <association>
-	relation 178070 ----
-	  a role_name "" multiplicity "1" private
-	    classrelation_ref 187926 // <association>
-	  b role_name "" multiplicity "*" private
-	    classrelation_ref 188054 // <association>
       end
 
       attribute 173846 "NumEdicao"
@@ -496,14 +471,6 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 146966 // <composition>
-	relation 144534 *---
-	  a role_name "" private
-	    classrelation_ref 146966 // <composition>
-	  b role_name "" private
-	    classrelation_ref 147094 // <composition>
-      end
-
       classrelation 147350 // <composition>
 	relation_ref 144662 // <composition>
       end
@@ -543,8 +510,8 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 146838 // ()
-	relation_ref 144406 // 
+      classrelation 146838 // <composition>
+	relation_ref 144406 // <composition>
       end
 
       classrelation 147478 // (PalavraChaveArtigo)
@@ -629,7 +596,7 @@ format 224
       end
     end
 
-    class 129430 "Area_Tematica"
+    class 129430 "AreaTematica"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -639,8 +606,8 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 145046 // <association>
-	relation_ref 143510 // <association>
+      classrelation 145046 // (PublicacaoArea)
+	relation_ref 143510 // PublicacaoArea
       end
 
       classrelation 147862 // <association>
@@ -690,18 +657,6 @@ format 224
 	MysqlColumn
       end
 
-      classrelation 195350 // <composition>
-	relation 185110 *---
-	  a role_name "" private
-	    classrelation_ref 195350 // <composition>
-	  b role_name "" private
-	    classrelation_ref 195478 // <composition>
-      end
-
-      classrelation 195478 // <composition>
-	relation_ref 185110 // <composition>
-      end
-
       classrelation 195606 // Area (Contem)
 	relation 185238 *--- name "Contem"
 	  a role_name "Area" multiplicity "0..1" private
@@ -715,7 +670,7 @@ format 224
       end
     end
 
-    class 129558 "Palavra_Chave"
+    class 129558 "PalavraChave"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -797,7 +752,6 @@ format 224
 	  b role_name "" multiplicity "1" private
 	    classrelation_ref 187542 // <aggregation>
       end
-
     end
 
     class 136214 "Dissertacao"
@@ -841,7 +795,7 @@ format 224
       end
     end
 
-    class 136598 "Relatorios_Tecnicos"
+    class 136598 "RelatoriosTecnicos"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -874,7 +828,7 @@ format 224
       end
     end
 
-    class 136726 "Textos_Pedagocicos"
+    class 136726 "TextosPedagocicos"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -984,6 +938,38 @@ format 224
 
       classrelation 172438 // ListaLivroEd
 	relation_ref 163734 // ListaLivroEd
+      end
+
+      classrelation 202646 // <composition>
+	relation_ref 191894 // <composition>
+      end
+
+      classrelation 202774 // <association>
+	relation 192022 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 202774 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 202902 // <association>
+      end
+
+      classrelation 203542 // <aggregation>
+	relation 192406 o---
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 203542 // <aggregation>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 203670 // <aggregation>
+      end
+
+      attribute 182934 "NumEdicao"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
@@ -1517,18 +1503,6 @@ format 224
 	relation_ref 162966 // <association>
       end
 
-      classrelation 180246 // <association>
-	relation 171030 ----
-	  a role_name "" private
-	    classrelation_ref 180246 // <association>
-	  b role_name "" private
-	    classrelation_ref 180374 // <association>
-      end
-
-      classrelation 188054 // <association>
-	relation_ref 178070 // <association>
-      end
-
       attribute 175894 "PrateleiraID"
 	private explicit_type "int"
 	stereotype "primary key"
@@ -1575,6 +1549,10 @@ format 224
 	mysql_decl ""
 	MysqlColumn
       end
+
+      classrelation 202902 // <association>
+	relation_ref 192022 // <association>
+      end
     end
 
     class 152598 "ListaDeLeitura"
@@ -1611,14 +1589,6 @@ format 224
 	idl_decl ""
 	mysql_decl ""
 	MysqlColumn
-      end
-
-      classrelation 172054 // <association>
-	relation 163606 ----
-	  a role_name "" private
-	    classrelation_ref 172054 // <association>
-	  b role_name "" private
-	    classrelation_ref 172182 // <association>
       end
 
       classrelation 172310 // (ListaLivroEd)
@@ -1681,6 +1651,17 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
+      attribute 182806 "NumSuspensao"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
     end
 
     class 159382 "PublicacaoEmprestavel"
@@ -1772,6 +1753,28 @@ format 224
 	idl_decl ""
 	mysql_decl ""
 	MysqlColumn
+      end
+
+      classrelation 203670 // <aggregation>
+	relation_ref 192406 // <aggregation>
+      end
+    end
+
+    class 172566 "Especialista"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 203798 // <generalisation>
+	relation 192534 ---|>
+	  a public
+	    classrelation_ref 203798 // <generalisation>
+	  b parent class_ref 150806 // Utente
       end
     end
   end
