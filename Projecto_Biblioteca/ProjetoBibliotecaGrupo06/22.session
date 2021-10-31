@@ -2,16 +2,12 @@ window_sizes 1920 1017 219 1696 971 0
 
 diagrams
   active  classdiagram_ref 128022 // Projecto Biblioteca
-    1696 971 107 A0-Landscape 325 0
+    1696 971 69 A0-Landscape 36 0
 end
 show_stereotypes
-selected classrelation_ref 137238 // <association>
+selected attribute_ref 189846 // Emprestavel
 open
   class_ref 128022 // Publicacao
-  class_ref 129430 // Area_Tematica
-  class_ref 129686 // Monografia
-  class_ref 150934 // Emprestimo
-  class_ref 152598 // ListaDeLeitura
-  class_ref 159382 // PublicacaoEmprestavel
+  class_ref 136214 // Dissertacao
 end
 end

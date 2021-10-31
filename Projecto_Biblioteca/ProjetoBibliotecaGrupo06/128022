@@ -1,6 +1,6 @@
 format 224
 "Projecto Biblioteca" // Projecto Biblioteca
-  revision 15
+  revision 16
   modified_by 22 "vasco"
   // class settings
   
@@ -200,6 +200,21 @@ format 224
 	    classrelation_ref 194966 // <association>
 	  b role_name "" multiplicity "*" private
 	    classrelation_ref 195094 // <association>
+      end
+
+      classrelation 210454 // <association>
+	relation_ref 199062 // <association>
+      end
+
+      attribute 189846 "Emprestavel"
+	private explicit_type "boolean"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
@@ -783,16 +798,6 @@ format 224
 	    classrelation_ref 150422 // <association>
       end
 
-      attribute 174102 "Nome"
-	private explicit_type "text"
-	cpp_decl ""
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	mysql_decl ""
-	MysqlColumn
-      end
     end
 
     class 136598 "RelatoriosTecnicos"
@@ -816,16 +821,6 @@ format 224
 	relation_ref 135830 // <association>
       end
 
-      attribute 174486 "Nome"
-	private explicit_type "text"
-	cpp_decl ""
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	mysql_decl ""
-	MysqlColumn
-      end
     end
 
     class 136726 "TextosPedagocicos"
@@ -853,16 +848,6 @@ format 224
 	    classrelation_ref 135830 // <association>
       end
 
-      attribute 174614 "Nome"
-	private explicit_type "text"
-	cpp_decl ""
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	mysql_decl ""
-	MysqlColumn
-      end
     end
 
     class 136854 "Tema"
@@ -1775,6 +1760,48 @@ format 224
 	  a public
 	    classrelation_ref 203798 // <generalisation>
 	  b parent class_ref 150806 // Utente
+      end
+    end
+
+    class 179094 "TipoPublicacao"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 210326 // <association>
+	relation 199062 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 210326 // <association>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 210454 // <association>
+      end
+
+      attribute 189590 "TipoPubID"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 189718 "Tipo"
+	private explicit_type "varchar(100)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
   end
