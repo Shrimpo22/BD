@@ -1,7 +1,7 @@
 format 224
 "Projecto Biblioteca" // Projecto Biblioteca
-  revision 16
-  modified_by 22 "vasco"
+  revision 18
+  modified_by 2 "flavi"
   // class settings
   
   classdiagramsettings member_max_width 0 end
@@ -797,7 +797,6 @@ format 224
 	  b role_name "" multiplicity "*" private
 	    classrelation_ref 150422 // <association>
       end
-
     end
 
     class 136598 "RelatoriosTecnicos"
@@ -820,7 +819,6 @@ format 224
       classrelation 136086 // <association>
 	relation_ref 135830 // <association>
       end
-
     end
 
     class 136726 "TextosPedagocicos"
@@ -847,7 +845,6 @@ format 224
 	  b role_name "" multiplicity "*" private
 	    classrelation_ref 135830 // <association>
       end
-
     end
 
     class 136854 "Tema"
@@ -1742,6 +1739,17 @@ format 224
 
       classrelation 203670 // <aggregation>
 	relation_ref 192406 // <aggregation>
+      end
+
+      attribute 128002 "Usado"
+	private explicit_type "bit"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 

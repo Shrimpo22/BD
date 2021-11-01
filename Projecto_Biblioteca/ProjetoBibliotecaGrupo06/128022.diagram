@@ -2,192 +2,192 @@ format 224
 
 classcanvas 128022 class_ref 128022 // Publicacao
   classdiagramsettings member_max_width 0 end
-  xyz 480.666 376.996 2000
+  xyz 778.066 368.146 2000
 end
 classcanvas 128150 class_ref 128150 // Periodico
   classdiagramsettings member_max_width 0 end
-  xyz 761.172 347.72 2000
+  xyz 1059.52 341.47 2000
 end
 classcanvas 128278 class_ref 128278 // Revista
   classdiagramsettings member_max_width 0 end
-  xyz 1046.54 348.765 2000
+  xyz 1346.74 341.815 2000
 end
 classcanvas 128406 class_ref 128406 // Jornal
   classdiagramsettings member_max_width 0 end
-  xyz 1045.77 307.219 2000
+  xyz 1344.57 300.319 2000
 end
 classcanvas 128534 class_ref 128534 // Livro
   classdiagramsettings member_max_width 0 end
-  xyz 747.126 643.932 2000
+  xyz 1045.68 635.082 2000
 end
 classcanvas 128662 class_ref 128662 // Editora
   classdiagramsettings member_max_width 0 end
-  xyz 242.746 524.351 2000
+  xyz 540.846 518.201 2000
 end
 classcanvas 128790 class_ref 128790 // PeriodicoEdicao
   classdiagramsettings member_max_width 0 end
-  xyz 726.031 483.576 2000
+  xyz 1024.13 477.926 2000
 end
 classcanvas 128918 class_ref 128918 // Autor
   classdiagramsettings member_max_width 0 end
-  xyz 235.724 453.694 2000
+  xyz 533.274 447.194 2000
 end
 classcanvas 129302 class_ref 129302 // Capa
   classdiagramsettings member_max_width 0 end
-  xyz 490.806 268.611 2000
+  xyz 789.806 261.961 2000
 end
 classcanvas 129430 class_ref 129430 // AreaTematica
   classdiagramsettings member_max_width 0 end
-  xyz 482.297 620.807 2000
+  xyz 781.847 613.707 2000
 end
 classcanvas 129558 class_ref 129558 // PalavraChave
   classdiagramsettings member_max_width 0 end
-  xyz 192.639 343.231 2000
+  xyz 491.739 337.231 2000
 end
 classcanvas 129686 class_ref 129686 // Monografia
   classdiagramsettings member_max_width 0 end
-  xyz 1129.1 427.16 2000
+  xyz 1428.9 420.26 2000
 end
 classcanvas 130582 class_ref 136214 // Dissertacao
   classdiagramsettings member_max_width 0 end
-  xyz 1418.51 480.593 2000
+  xyz 1716.41 473.743 2000
 end
 classcanvas 131350 class_ref 136598 // RelatoriosTecnicos
   classdiagramsettings member_max_width 0 end
-  xyz 1418.59 534.953 2000
+  xyz 1716.89 528.553 2000
 end
 classcanvas 131606 class_ref 136726 // TextosPedagocicos
   classdiagramsettings member_max_width 0 end
-  xyz 1414.62 600.379 2000
+  xyz 1711.82 593.529 2000
 end
 classcanvas 132246 class_ref 136854 // Tema
   classdiagramsettings member_max_width 0 end
-  xyz 1669.25 529.545 2000
+  xyz 1968.25 522.095 2000
 end
 classcanvas 133782 class_ref 136982 // LivroEdicao
   classdiagramsettings member_max_width 0 end
-  xyz 709.489 546.378 2006
+  xyz 1007.14 538.828 2006
 end
 classcanvas 135446 class_ref 143638 // Relevancia
   classdiagramsettings member_max_width 0 end
-  xyz 8.232 632.875 2000
+  xyz 307.282 626.875 2000
 end
 classcanvas 136726 class_ref 129174 // Artigo
   classdiagramsettings member_max_width 0 end
-  xyz 661.49 223.061 2000
+  xyz 960.54 216.861 2000
 end
 classcanvas 137110 class_ref 129046 // Capitulo
   classdiagramsettings member_max_width 0 end
-  xyz 684.985 730.96 2000
+  xyz 983.285 722.16 2000
 end
 classcanvas 140438 class_ref 143894 // Tipo
   classdiagramsettings member_max_width 0 end
-  xyz 1384 341.669 2000
+  xyz 1683.35 335.969 2000
 end
 classcanvas 141078 class_ref 144022 // Periodicidade
   classdiagramsettings member_max_width 0 end
-  xyz 1085.01 231.083 2000
+  xyz 1383.61 226.783 2000
 end
 classcanvas 141334 class_ref 144150 // Feeds
   classdiagramsettings member_max_width 0 end
-  xyz 14.7524 541.668 2000
+  xyz 312.602 534.768 2000
 end
 classcanvas 141974 class_ref 144278 // PeriodicidadePeriodico
   classdiagramsettings member_max_width 0 end
-  xyz 893.835 170.784 2006
+  xyz 1192.18 163.434 2006
 end
 classcanvas 144406 class_ref 150806 // Utente
   classdiagramsettings member_max_width 0 end
-  xyzwh 1078.52 894.265 2000 190 218
+  xyzwh 1375.42 887.115 2000 211 218
 end
 classcanvas 144918 class_ref 150934 // Emprestimo
   classdiagramsettings member_max_width 0 end
-  xyz 792.62 1164.65 2000
+  xyz 1089.32 1158.45 2000
 end
 classcanvas 146070 class_ref 151318 // Reserva
   classdiagramsettings member_max_width 0 end
-  xyz 993.03 1175.59 2000
+  xyz 1292.28 1167.04 2000
 end
 classcanvas 147222 class_ref 151702 // Periodo
   classdiagramsettings member_max_width 0 end
-  xyz 1100.61 1251.02 2000
+  xyz 1398.51 1244.92 2000
 end
 classcanvas 147478 class_ref 151830 // Piso
   classdiagramsettings member_max_width 0 end
-  xyz 16.376 817.288 2000
+  xyz 314.226 811.538 2000
 end
 classcanvas 147606 class_ref 151958 // Armario
   classdiagramsettings member_max_width 0 end
-  xyz 253.998 808.353 2000
+  xyz 552.348 802.603 2000
 end
 classcanvas 147734 class_ref 152086 // Prateleira
   classdiagramsettings member_max_width 0 end
-  xyz 521.858 804.703 2000
+  xyz 819.708 797.003 2000
 end
 classcanvas 152086 class_ref 152470 // EstadoDeConservacao
   classdiagramsettings member_max_width 0 end
-  xyz 940.193 605.604 2000
+  xyz 1238.24 597.554 2000
 end
 classcanvas 152982 class_ref 152598 // ListaDeLeitura
   classdiagramsettings member_max_width 0 end
-  xyz 1395.15 972.449 2000
+  xyz 1693.75 965.549 2000
 end
 classcanvas 153750 class_ref 159126 // Configuracoes
   classdiagramsettings member_max_width 0 end
-  xyz 1461.7 224.073 2000
+  xyz 1760.2 217.373 2000
 end
 classcanvas 154902 class_ref 159254 // PeriodoSuspensao
   classdiagramsettings member_max_width 0 end
-  xyz 1258.09 1164.91 2000
+  xyz 1555.04 1157.56 2000
 end
 classcanvas 155798 class_ref 159382 // PublicacaoEmprestavel
   classdiagramsettings member_max_width 0 end
-  xyz 756.358 971.39 2000
+  xyz 1055.41 965.19 2000
 end
 classcanvas 157078 class_ref 136982 // LivroEdicao
   classdiagramsettings member_max_width 0 end
-  xyz 1700.53 980.04 2000
+  xyz 1999.08 973.94 2000
 end
 classcanvas 157462 class_ref 129430 // AreaTematica
   classdiagramsettings member_max_width 0 end
-  xyz 1376.76 1095.6 2000
+  xyz 1674.66 1088.25 2000
 end
 classcanvas 158102 class_ref 159510 // Pedido
   classdiagramsettings member_max_width 0 end
-  xyz 922.35 1035.28 2000
+  xyz 1220.75 1028.18 2000
 end
 classcanvas 162070 class_ref 166038 // RFID
   classdiagramsettings member_max_width 0 end
-  xyz 1000.07 543.76 2000
+  xyz 1290.07 521.58 2000
 end
 classcanvas 169750 class_ref 128022 // Publicacao
   classdiagramsettings member_max_width 0 end
-  xyz 527.526 919.646 2000
+  xyz 825.876 913.446 2000
 end
 classcanvas 173334 class_ref 172566 // Especialista
   classdiagramsettings member_max_width 0 end
-  xyz 1137.21 773.19 2000
+  xyz 1435.11 767.94 2000
 end
 classcanvas 173846 class_ref 143510 // PublicacaoArea
   classdiagramsettings member_max_width 0 end
-  xyz 258 634 2000
+  xyz 557.35 628.6 2000
 end
 classcanvas 175126 class_ref 179094 // TipoPublicacao
   classdiagramsettings member_max_width 0 end
-  xyz 284 930 2000
+  xyz 581.45 923.4 2000
 end
 relationcanvas 129814 relation_ref 128022 // <generalisation>
   decenter_end 449
-  from ref 128534 z 2001 to point 706 661
-  line 142614 z 2001 to point 705 454
+  from ref 128534 z 2001 to point 1005.85 653.25
+  line 142614 z 2001 to point 1005.85 446.4
   line 168342 z 2001 to ref 128022
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 130070 relation_ref 134550 // <generalisation>
   decenter_end 449
-  from ref 128150 z 2001 to point 704 368
-  line 142998 z 2001 to point 704 454
+  from ref 128150 z 2001 to point 1001.65 361.65
+  line 142998 z 2001 to point 1001.65 446.4
   line 168214 z 2001 to ref 128022
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
@@ -208,264 +208,264 @@ end
 relationcanvas 130454 relation_ref 134934 // <generalisation>
   decenter_begin 259
   decenter_end 546
-  from ref 128406 z 2001 to point 978 316
-  line 165910 z 2001 to point 976 370
+  from ref 128406 z 2001 to point 1276.9 310.6
+  line 165910 z 2001 to point 1275.35 363.75
   line 166038 z 2001 to ref 128150
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 131222 relation_ref 135318 // <generalisation>
   decenter_end 629
-  from ref 130582 z 2001 to point 1250 498
-  line 167574 z 2001 to point 1248 452
+  from ref 130582 z 2001 to point 1548.5 491.15
+  line 167574 z 2001 to point 1546.4 446.4
   line 170518 z 2001 to ref 129686
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 131478 relation_ref 135446 // <generalisation>
   decenter_end 703
-  from ref 131350 z 2001 to point 1251 551
-  line 167318 z 2001 to point 1248 452
+  from ref 131350 z 2001 to point 1548.5 543.75
+  line 167318 z 2001 to point 1546.4 446.4
   line 170390 z 2001 to ref 129686
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 131734 relation_ref 135574 // <generalisation>
   decenter_end 708
-  from ref 131606 z 2001 to point 1254 619
-  line 166934 z 2001 to point 1248 452
+  from ref 131606 z 2001 to point 1551.15 613.25
+  line 166934 z 2001 to point 1546.4 446.4
   line 170262 z 2001 to ref 129686
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 132374 relation_ref 135702 // <association>
   decenter_end 423
-  from ref 131606 z 2001 to point 1731 622
+  from ref 131606 z 2001 to point 2028.5 616.9
   line 140822 z 2001 to ref 132246
   no_role_a no_role_b
-  multiplicity_a_pos 1717 600 3000 multiplicity_b_pos 1544 626 3000
+  multiplicity_a_pos 2015 594 3000 multiplicity_b_pos 1842 619 3000
 end
 relationcanvas 132502 relation_ref 135830 // <association>
   decenter_begin 361
   from ref 132246 z 2001 to ref 131350
   no_role_a no_role_b
-  multiplicity_a_pos 1546 559 3000 multiplicity_b_pos 1652 559 3000
+  multiplicity_a_pos 1844 552 3000 multiplicity_b_pos 1950 552 3000
 end
 relationcanvas 132886 relation_ref 136214 // PubAutor
   decenter_end 572
-  from ref 128918 z 2001 label "PubAutor" italic max_width 255 xyz 412 468 2001 to ref 128022
+  from ref 128918 z 2001 label "PubAutor" italic max_width 255 xyz 710 461 2001 to ref 128022
   no_role_a no_role_b
-  multiplicity_a_pos 465 493 3000 multiplicity_b_pos 399 486 3000
+  multiplicity_a_pos 764 486 3000 multiplicity_b_pos 697 479 3000
 end
 relationcanvas 133142 relation_ref 136470 // <association>
   decenter_begin 944
   from ref 128022 z 2001 to ref 128662
   no_role_a no_role_b
-  multiplicity_a_pos 396 563 3000 multiplicity_b_pos 465 565 3000
+  multiplicity_a_pos 695 556 3000 multiplicity_b_pos 764 559 3000
 end
 relationcanvas 133270 relation_ref 136598 // <association>
   from ref 129302 z 2001 to ref 128022
   no_role_a no_role_b
-  multiplicity_a_pos 549 357 3000 multiplicity_b_pos 548 355 3000
+  multiplicity_a_pos 847 351 3000 multiplicity_b_pos 846 349 3000
 end
 relationcanvas 134934 relation_ref 143510 // PublicacaoArea
   decenter_begin 254
   decenter_end 223
-  from ref 128022 z 2001 label "PublicacaoArea" italic max_width 255 xyz 482 579 2001 to ref 129430
+  from ref 128022 z 2001 label "PublicacaoArea" italic max_width 255 xyz 781 572 2001 to ref 129430
   no_role_a no_role_b
-  multiplicity_a_pos 506 601 3000 multiplicity_b_pos 506 575 3000
+  multiplicity_a_pos 804 594 3000 multiplicity_b_pos 804 569 3000
 end
 relationcanvas 135702 relation_ref 143766 // PalavraChavePub
   decenter_begin 527
   decenter_end 404
-  from ref 129558 z 2001 label "PalavraChavePub" italic max_width 255 xyz 410.5 359 2001 to point 452 375
-  line 164886 z 2001 to point 452 445
+  from ref 129558 z 2001 label "PalavraChavePub" italic max_width 255 xyz 709 352 2001 to point 751.15 370.6
+  line 164886 z 2001 to point 751.15 440.1
   line 165014 z 2001 to ref 128022
   no_role_a no_role_b
-  multiplicity_a_pos 465 462 3000 multiplicity_b_pos 396 384 3000
+  multiplicity_a_pos 764 456 3000 multiplicity_b_pos 694 377 3000
 end
 relationcanvas 137366 relation_ref 144662 // <composition>
   decenter_end 527
   from ref 128534 z 2001 to ref 137110
   no_role_a no_role_b
-  multiplicity_a_pos 753 711 3000 multiplicity_b_pos 751 688 3000
+  multiplicity_a_pos 1051 704 3000 multiplicity_b_pos 1050 681 3000
 end
 relationcanvas 137494 relation_ref 144790 // PalavraChaveArtigo
   decenter_begin 259
   decenter_end 479
-  from ref 136726 z 2001 label "PalavraChaveArtigo" italic max_width 255 xyz 417 220 2001 to point 285 232
+  from ref 136726 z 2001 label "PalavraChaveArtigo" italic max_width 255 xyz 715 214 2001 to point 585.85 226.4
   line 137622 z 2001 to ref 129558
   no_role_a no_role_b
-  multiplicity_a_pos 273 327 3000 multiplicity_b_pos 650 243 3000
+  multiplicity_a_pos 571 321 3000 multiplicity_b_pos 949 236 3000
 end
 relationcanvas 137750 relation_ref 144918 // <association>
   decenter_end 221
-  from ref 136726 z 2001 to point 738 172
-  line 137878 z 2001 to point 175 173
-  line 138006 z 2001 to point 176 767
-  line 138134 z 2001 to point 517 767
+  from ref 136726 z 2001 to point 1036.9 166.4
+  line 137878 z 2001 to point 475.35 166.4
+  line 138006 z 2001 to point 475.35 760.1
+  line 138134 z 2001 to point 815.35 760.1
   line 138262 z 2001 to ref 129430
   no_role_a no_role_b
-  multiplicity_a_pos 503 691 3000 multiplicity_b_pos 728 209 3000
+  multiplicity_a_pos 801 684 3000 multiplicity_b_pos 1026 202 3000
 end
 relationcanvas 138518 relation_ref 145046 // PalavraChaveCap
   decenter_begin 200
   decenter_end 68
-  from ref 137110 z 2007 label "PalavraChaveCap" italic max_width 255 xyz 401 724.5 2007 to point 203 737
+  from ref 137110 z 2007 label "PalavraChaveCap" italic max_width 255 xyz 699 717 2007 to point 501.65 730.6
   line 165142 z 2007 to ref 129558
   no_role_a no_role_b
-  multiplicity_a_pos 191 414 3000 multiplicity_b_pos 669 746 3000
+  multiplicity_a_pos 489 407 3000 multiplicity_b_pos 967 739 3000
 end
 relationcanvas 138902 relation_ref 145174 // <association>
   decenter_begin 879
   decenter_end 771
-  from ref 129430 z 2001 to point 630 765
+  from ref 129430 z 2001 to point 928.5 760.1
   line 139030 z 2001 to ref 137110
   no_role_a no_role_b
-  multiplicity_a_pos 669 774 3000 multiplicity_b_pos 616 691 3000
+  multiplicity_a_pos 967 767 3000 multiplicity_b_pos 915 684 3000
 end
 relationcanvas 140310 relation_ref 145942 // <composition>
   decenter_begin 432
   decenter_end 372
   from ref 128150 z 2001 to ref 128790
   no_role_a no_role_b
-  multiplicity_a_pos 779 468 3000 multiplicity_b_pos 777 397 3000
+  multiplicity_a_pos 1077 461 3000 multiplicity_b_pos 1075 391 3000
 end
 relationcanvas 140566 relation_ref 146070 // <association>
   from ref 140438 z 2001 to ref 130582
   no_role_a no_role_b
-  multiplicity_a_pos 1442 461 3000 multiplicity_b_pos 1440 412 3000
+  multiplicity_a_pos 1741 454 3000 multiplicity_b_pos 1738 406 3000
 end
 relationcanvas 140694 relation_ref 146198 // <association>
   decenter_end 400
-  from ref 130582 z 2001 to point 1728 497
+  from ref 130582 z 2001 to point 2026.4 490.6
   line 140950 z 2001 to ref 132246
   no_role_a no_role_b
-  multiplicity_a_pos 1714 510 3000 multiplicity_b_pos 1504 506 3000
+  multiplicity_a_pos 2013 504 3000 multiplicity_b_pos 1802 499 3000
 end
 relationcanvas 141206 relation_ref 146326 // PeriodicidadePeriodico
   decenter_begin 407
   decenter_end 874
-  from ref 141078 z 2001 label "PeriodicidadePeriodico" italic max_width 255 xyz 903 235.5 2001 to point 846 249
+  from ref 141078 z 2001 label "PeriodicidadePeriodico" italic max_width 255 xyz 1201 229 2001 to point 1145.85 243.75
   line 163606 z 2001 to ref 128150
   no_role_a no_role_b
-  multiplicity_a_pos 805 328 3000 multiplicity_b_pos 1068 257 3000
+  multiplicity_a_pos 1104 321 3000 multiplicity_b_pos 1366 251 3000
 end
 relationcanvas 141462 relation_ref 146454 // <association>
   decenter_end 615
   from ref 141334 z 2001 to ref 128662
   no_role_a no_role_b
-  multiplicity_a_pos 228 569 3000 multiplicity_b_pos 172 567 3000
+  multiplicity_a_pos 526 562 3000 multiplicity_b_pos 471 561 3000
 end
 relationcanvas 142230 relation_ref 146710 // <association>
   decenter_begin 158
-  from ref 141334 z 2001 to point 34 134
-  line 142358 z 2001 to point 959 128
+  from ref 141334 z 2001 to point 331.15 126.4
+  line 142358 z 2001 to point 1258 121.65
   line 142486 z 2001 to ref 141974
   no_role_a no_role_b
-  multiplicity_a_pos 949 154 3000 multiplicity_b_pos 26 526 3000
+  multiplicity_a_pos 1248 147 3000 multiplicity_b_pos 324 519 3000
 end
 relationcanvas 152470 relation_ref 155670 // <association>
   decenter_begin 856
   decenter_end 573
-  from ref 129686 z 2001 to point 1192 631
+  from ref 129686 z 2001 to point 1491.15 623.75
   line 167702 z 2001 to ref 152086
   no_role_a no_role_b
-  multiplicity_a_pos 1110 640 3000 multiplicity_b_pos 1179 472 3000
+  multiplicity_a_pos 1408 634 3000 multiplicity_b_pos 1477 466 3000
 end
 relationcanvas 153110 relation_ref 155798 // <association>
   from ref 144406 z 2001 to ref 152982
   no_role_a no_role_b
-  multiplicity_a_pos 1386 1008 3000 multiplicity_b_pos 1275 1008 3000
+  multiplicity_a_pos 1684 1001 3000 multiplicity_b_pos 1573 1001 3000
 end
 relationcanvas 154134 relation_ref 162710 // <composition>
   decenter_end 531
   from ref 147606 z 2001 to ref 147734
   no_role_a no_role_b
-  multiplicity_a_pos 509 844 3000 multiplicity_b_pos 425 844 3000
+  multiplicity_a_pos 807 837 3000 multiplicity_b_pos 723 837 3000
 end
 relationcanvas 154262 relation_ref 162838 // <composition>
   from ref 147478 z 2001 to ref 147606
   no_role_a no_role_b
-  multiplicity_a_pos 225 848 3000 multiplicity_b_pos 184 848 3000
+  multiplicity_a_pos 524 841 3000 multiplicity_b_pos 483 841 3000
 end
 relationcanvas 154518 relation_ref 162966 // <association>
   decenter_begin 634
   decenter_end 404
   from ref 129430 z 2001 to ref 147734
   no_role_a no_role_b
-  multiplicity_a_pos 576 785 3000 multiplicity_b_pos 574 691 3000
+  multiplicity_a_pos 874 779 3000 multiplicity_b_pos 873 684 3000
 end
 relationcanvas 154774 relation_ref 163094 // PeriodoSuspensao
   decenter_begin 455
   decenter_end 393
-  from ref 144406 z 2001 label "PeriodoSuspensao" italic max_width 255 xyz 1113 1175 2001 to ref 147222
+  from ref 144406 z 2001 label "PeriodoSuspensao" italic max_width 255 xyz 1411 1169 2001 to ref 147222
   no_role_a no_role_b
-  multiplicity_a_pos 1153 1238 3000 multiplicity_b_pos 1153 1116 3000
+  multiplicity_a_pos 1451 1231 3000 multiplicity_b_pos 1451 1109 3000
 end
 relationcanvas 156822 relation_ref 163478 // Pedido
-  from ref 155798 z 2001 label "Pedido" italic max_width 255 xyz 951 987 2001 to ref 144406
+  from ref 155798 z 2001 label "Pedido" italic max_width 255 xyz 1249 981 2001 to ref 144406
   no_role_a no_role_b
-  multiplicity_a_pos 1067 1007 3000 multiplicity_b_pos 900 1008 3000
+  multiplicity_a_pos 1366 1001 3000 multiplicity_b_pos 1199 1001 3000
 end
 relationcanvas 157334 relation_ref 163734 // ListaLivroEd
-  from ref 152982 z 2001 label "ListaLivroEd" italic max_width 255 xyz 1576 990 2001 to ref 157078
+  from ref 152982 z 2001 label "ListaLivroEd" italic max_width 255 xyz 1875 984 2001 to ref 157078
   no_role_a no_role_b
-  multiplicity_a_pos 1688 1014 3000 multiplicity_b_pos 1519 1010 3000
+  multiplicity_a_pos 1986 1007 3000 multiplicity_b_pos 1817 1004 3000
 end
 relationcanvas 157590 relation_ref 163862 // <association>
   from ref 152982 z 2001 to ref 157462
   no_role_a no_role_b
-  multiplicity_a_pos 1430 1076 3000 multiplicity_b_pos 1441 1043 3000
+  multiplicity_a_pos 1729 1069 3000 multiplicity_b_pos 1739 1036 3000
 end
 relationcanvas 158486 relation_ref 163990 // <generalisation>
-  from ref 144918 z 2001 to point 854 1125
-  line 158742 z 2001 to point 943 1126
+  from ref 144918 z 2001 to point 1151.15 1120.1
+  line 158742 z 2001 to point 1241.65 1120.1
   line 158870 z 2001 to ref 158102
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 158614 relation_ref 164118 // <generalisation>
-  from ref 146070 z 2001 to point 1037 1127
-  line 158998 z 2001 to point 943 1125
-  line 159126 z 2001 to point 943 1122
+  from ref 146070 z 2001 to point 1335.35 1120.1
+  line 158998 z 2001 to point 1241.65 1120.1
+  line 159126 z 2001 to point 1241.65 1116.9
   line 161558 z 2001 to ref 158102
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 161686 relation_ref 177686 // <association>
-  decenter_begin 815
+  decenter_begin 814
   decenter_end 224
-  from ref 128790 z 2001 to point 974 520
+  from ref 128790 z 2001 to point 1271.15 513.25
   line 166678 z 2001 to ref 152086
   no_role_a no_role_b
-  multiplicity_a_pos 960 586 3000 multiplicity_b_pos 906 529 3000
+  multiplicity_a_pos 1258 579 3000 multiplicity_b_pos 1204 522 3000
 end
 relationcanvas 162198 relation_ref 177814 // <aggregation>
   decenter_begin 252
   decenter_end 916
   from ref 129686 z 2001 to ref 162070
   no_role_a no_role_b
-  multiplicity_a_pos 1131 524 3000 multiplicity_b_pos 1131 472 3000
+  multiplicity_a_pos 1455 498 3000 multiplicity_b_pos 1433 467 3000
 end
 relationcanvas 162326 relation_ref 177942 // <aggregation>
   decenter_begin 386
   decenter_end 428
-  from ref 128790 z 2001 to point 1066 499
+  from ref 128790 z 2001 to point 1365.85 493.25
   line 174614 z 2001 to ref 162070
   no_role_a no_role_b
-  multiplicity_a_pos 1052 524 3000 multiplicity_b_pos 906 508 3000
+  multiplicity_a_pos 1355 498 3000 multiplicity_b_pos 1205 501 3000
 end
 relationcanvas 165782 relation_ref 144406 // <composition>
   decenter_end 731
   from ref 128150 z 2001 to ref 136726
   no_role_a no_role_b
-  multiplicity_a_pos 764 274 3000 multiplicity_b_pos 771 332 3000
+  multiplicity_a_pos 1062 267 3000 multiplicity_b_pos 1070 326 3000
 end
 relationcanvas 169878 relation_ref 184854 // <association>
   from ref 169750 z 2001 to ref 147734
   no_role_a no_role_b
-  multiplicity_a_pos 591 875 3000 multiplicity_b_pos 593 900 3000
+  multiplicity_a_pos 890 869 3000 multiplicity_b_pos 891 894 3000
 end
 relationcanvas 170006 relation_ref 184982 // <generalisation>
   decenter_end 455
@@ -475,32 +475,32 @@ relationcanvas 170006 relation_ref 184982 // <generalisation>
 end
 relationcanvas 171542 relation_ref 185238 // Contem
   decenter_end 550
-  from ref 129430 z 2001 label "Contem" italic max_width 255 xyz 641 549 2001 to point 694 646
-  line 171670 z 2001 to point 694 569
-  line 171798 z 2001 to point 575 569
+  from ref 129430 z 2001 label "Contem" italic max_width 255 xyz 944 534 2001 to point 1001.65 630.6
+  line 171670 z 2001 to point 991.15 563.75
+  line 171798 z 2001 to point 875.35 563.75
   line 171926 z 2001 to ref 129430
-  role_a_pos 586 601 3000 role_b_pos 662 631 3000
-  multiplicity_a_pos 548 601 3000 multiplicity_b_pos 662 656 3000
+  role_a_pos 902 591 3000 role_b_pos 999 612 3000
+  multiplicity_a_pos 860 591 3000 multiplicity_b_pos 999 641 3000
 end
 relationcanvas 172182 relation_ref 191894 // <composition>
   decenter_end 384
   from ref 128534 z 2007 to ref 133782
   no_role_a no_role_b
-  multiplicity_a_pos 760 617 3000 multiplicity_b_pos 758 624 3000
+  multiplicity_a_pos 1059 611 3000 multiplicity_b_pos 1056 617 3000
 end
 relationcanvas 172310 relation_ref 192022 // <association>
   decenter_begin 730
-  decenter_end 815
-  from ref 133782 z 2007 to point 831 642
+  decenter_end 814
+  from ref 133782 z 2007 to point 1128.5 636.9
   line 172566 z 2007 to ref 152086
   no_role_a no_role_b
-  multiplicity_a_pos 923 651 3000 multiplicity_b_pos 819 617 3000
+  multiplicity_a_pos 1221 644 3000 multiplicity_b_pos 1117 611 3000
 end
 relationcanvas 172950 relation_ref 192406 // <aggregation>
   decenter_begin 337
   from ref 133782 z 2007 to ref 162070
   no_role_a no_role_b
-  multiplicity_a_pos 983 574 3000 multiplicity_b_pos 889 574 3000
+  multiplicity_a_pos 1268 566 3000 multiplicity_b_pos 1234 569 3000
 end
 relationcanvas 173462 relation_ref 192534 // <generalisation>
   from ref 173334 z 2001 to ref 144406
@@ -510,14 +510,14 @@ end
 relationcanvas 173974 relation_ref 143638 // <association>
   from ref 135446 z 2001 to ref 173846
   no_role_a no_role_b
-  multiplicity_a_pos 243 660 3000 multiplicity_b_pos 160 661 3000
+  multiplicity_a_pos 541 654 3000 multiplicity_b_pos 458 654 3000
 end
 relationcanvas 175254 relation_ref 199062 // <association>
   decenter_begin 632
   decenter_end 270
   from ref 175126 z 2001 to ref 169750
   no_role_a no_role_b
-  multiplicity_a_pos 512 978 3000 multiplicity_b_pos 458 978 3000
+  multiplicity_a_pos 811 971 3000 multiplicity_b_pos 756 971 3000
 end
 line 142102 -_-_ decenter_begin 488 decenter_end 451
   from ref 141974 z 2007 to ref 141206

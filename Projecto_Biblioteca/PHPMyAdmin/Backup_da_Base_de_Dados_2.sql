@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2021 at 11:54 AM
+-- Generation Time: Oct 31, 2021 at 09:44 PM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- PHP Version: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `biblioteca_grupo_06`
+-- Database: `projecto`
 --
 
 -- --------------------------------------------------------
@@ -33,6 +33,22 @@ CREATE TABLE `areatematica` (
   `Nome` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `areatematica`
+--
+
+INSERT INTO `areatematica` (`AreaTematica_AreaTemID`, `AreaTemID`, `Nome`) VALUES
+(1, 1, 'Informática'),
+(1, 2, 'Cibersegurança'),
+(1, 3, 'POO'),
+(1, 4, 'Sistemas de Informação'),
+(1, 5, 'Machine Learning'),
+(1, 6, 'Assembly'),
+(1, 7, 'Linux'),
+(1, 8, 'Administração de Sistemas'),
+(1, 9, 'Ciência de Dados'),
+(1, 10, 'Python');
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +60,35 @@ CREATE TABLE `armario` (
   `Capacidade` int(11) NOT NULL DEFAULT 0,
   `ArmarioID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `armario`
+--
+
+INSERT INTO `armario` (`Piso_PisoID`, `Capacidade`, `ArmarioID`) VALUES
+(1, 259, 2),
+(1, 256, 3),
+(1, 279, 5),
+(1, 195, 7),
+(1, 231, 9),
+(1, 210, 11),
+(1, 245, 17),
+(1, 293, 18),
+(1, 170, 21),
+(2, 110, 1),
+(2, 277, 6),
+(2, 238, 10),
+(2, 244, 12),
+(2, 292, 13),
+(2, 101, 19),
+(2, 142, 20),
+(2, 192, 22),
+(3, 223, 4),
+(3, 170, 8),
+(3, 170, 14),
+(3, 265, 15),
+(3, 251, 16),
+(3, 214, 23);
 
 -- --------------------------------------------------------
 
@@ -57,6 +102,14 @@ CREATE TABLE `artigo` (
   `ArtigoID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `artigo`
+--
+
+INSERT INTO `artigo` (`Periodico_Publicacao_PubID`, `AreaTematica_AreaTemID`, `ArtigoID`) VALUES
+(5, 6, 1),
+(7, 6, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -68,6 +121,22 @@ CREATE TABLE `autor` (
   `Nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `autor`
+--
+
+INSERT INTO `autor` (`AutorID`, `Nome`) VALUES
+(2, 'Abbe'),
+(7, 'Dorolice'),
+(10, 'Etta'),
+(3, 'Frasquito'),
+(9, 'Garrett'),
+(1, 'Leisha'),
+(6, 'Nancee'),
+(5, 'Stavro'),
+(4, 'Tootsie'),
+(8, 'Uri');
+
 -- --------------------------------------------------------
 
 --
@@ -77,8 +146,30 @@ CREATE TABLE `autor` (
 CREATE TABLE `capa` (
   `Miniatura` varchar(255) NOT NULL,
   `Ampliada` varchar(255) NOT NULL,
-  `CapaID` int(11) NOT NULL
+  `CapaID` int(11) NOT NULL,
+  `Publicacao_PubID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `capa`
+--
+
+INSERT INTO `capa` (`Miniatura`, `Ampliada`, `CapaID`, `Publicacao_PubID`) VALUES
+('lxjz/ramssamd/qgr', 'zjro/atpnmrno/fpn', 1, 1),
+('tchu/yqqcgzil/lnp', 'siij/wrnrxgel/vyv', 2, 2),
+('jzgy/rvtzbdyn/hkz', 'nkok/teqvthdc/qah', 3, 3),
+('juma/xfanwnbd/hid', 'yzrd/daglvjoe/thj', 4, 4),
+('ycvw/bhhbavfc/oiz', 'rvpg/cocqhegs/aet', 5, 5),
+('iijm/jozndjan/roh', 'wvdj/xctikgww/jjs', 6, 6),
+('vqvi/qaszdacc/ylc', 'cdoz/wewagvgx/kcp', 7, 7),
+('tuwp/hzfkdhxg/buq', 'vjbs/gkymjzbq/sot', 8, 8),
+('tqln/fbajftcg/zbr', 'cesm/ysjdkfwj/vth', 9, 9),
+('hwmn/utvegazy/svp', 'ihsn/xqgslnxd/lyt', 10, 10),
+('limf/vjtzmpla/jct', 'gwoy/kjcivedd/xys', 26, 26),
+('tewx/ovicpkwg/xli', 'iwpu/syfswxkc/sjv', 27, 27),
+('jrow/quxkuzcr/azv', 'jlnl/vstaaovd/mzi', 28, 28),
+('zxet/nemaagzf/axh', 'ovvs/laftqwuy/hpa', 29, 29),
+('dqfn/sdelhsox/bjq', 'utua/aqrmwfpv/wpn', 30, 30);
 
 -- --------------------------------------------------------
 
@@ -92,6 +183,14 @@ CREATE TABLE `capitulo` (
   `NumCap` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `capitulo`
+--
+
+INSERT INTO `capitulo` (`Livro_Publicacao_PubID`, `AreaTematica_AreaTemID`, `NumCap`) VALUES
+(3, 3, 7),
+(1, 9, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -103,6 +202,13 @@ CREATE TABLE `configuracoes` (
   `ValorMulta` float NOT NULL,
   `NumProlongamentosMax` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `configuracoes`
+--
+
+INSERT INTO `configuracoes` (`Configuracoes_ID`, `ValorMulta`, `NumProlongamentosMax`) VALUES
+(1, 250, 3);
 
 -- --------------------------------------------------------
 
@@ -116,6 +222,13 @@ CREATE TABLE `dissertacao` (
   `Tipo_TipoID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `dissertacao`
+--
+
+INSERT INTO `dissertacao` (`Monografia_Publicacao_PubID`, `Tema_TemaID`, `Tipo_TipoID`) VALUES
+(10, 10, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -126,6 +239,22 @@ CREATE TABLE `editora` (
   `EditID` int(11) NOT NULL,
   `Nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `editora`
+--
+
+INSERT INTO `editora` (`EditID`, `Nome`) VALUES
+(5, 'Bernhard-Stoltenberg'),
+(1, 'Dare Group'),
+(7, 'Dare-Wintheiser'),
+(6, 'Douglas-D\'Amore'),
+(8, 'Kemmer-Collins'),
+(2, 'Lockman-Nicolas'),
+(9, 'Roberts-Stroman'),
+(3, 'Roob, Littel and Shanahan'),
+(4, 'Schumm, Kuhlman and Jones'),
+(10, 'Zulauf-Bruen');
 
 -- --------------------------------------------------------
 
@@ -143,6 +272,15 @@ CREATE TABLE `emprestimo` (
   `Extravio` bit(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `emprestimo`
+--
+
+INSERT INTO `emprestimo` (`Pedido_Utente_NumUtente_`, `Pedido_PublicacaoEmprestavel_Publicacao_PubID_`, `DataAquisicao`, `DataLimite`, `MultaAPagar`, `NumProlongamentos`, `Extravio`) VALUES
+(14, 1, '2021-10-31', '2021-11-30', 3, 0, b'0'),
+(17, 1, '2021-10-19', '2021-11-19', 5, 1, b'1'),
+(19, 4, '2021-09-01', '2021-10-01', 5, 0, b'1');
+
 -- --------------------------------------------------------
 
 --
@@ -153,6 +291,13 @@ CREATE TABLE `especialista` (
   `Utente_NumUtente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `especialista`
+--
+
+INSERT INTO `especialista` (`Utente_NumUtente`) VALUES
+(20);
+
 -- --------------------------------------------------------
 
 --
@@ -160,8 +305,19 @@ CREATE TABLE `especialista` (
 --
 
 CREATE TABLE `estadodeconservacao` (
-  `EstadoID` int(11) NOT NULL
+  `EstadoID` int(11) NOT NULL,
+  `Estado` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `estadodeconservacao`
+--
+
+INSERT INTO `estadodeconservacao` (`EstadoID`, `Estado`) VALUES
+(1, 'Novo'),
+(2, 'Gasto'),
+(3, 'Inutilizado'),
+(4, 'Extraviado');
 
 -- --------------------------------------------------------
 
@@ -174,6 +330,22 @@ CREATE TABLE `feeds` (
   `FeedID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `feeds`
+--
+
+INSERT INTO `feeds` (`Editora_EditID`, `FeedID`) VALUES
+(4, 1),
+(6, 2),
+(9, 3),
+(7, 4),
+(3, 5),
+(9, 6),
+(5, 7),
+(10, 8),
+(10, 9),
+(2, 10);
+
 -- --------------------------------------------------------
 
 --
@@ -183,6 +355,13 @@ CREATE TABLE `feeds` (
 CREATE TABLE `jornal` (
   `Periodico_Publicacao_PubID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `jornal`
+--
+
+INSERT INTO `jornal` (`Periodico_Publicacao_PubID`) VALUES
+(5);
 
 -- --------------------------------------------------------
 
@@ -198,6 +377,14 @@ CREATE TABLE `listadeleitura` (
   `Criterio` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `listadeleitura`
+--
+
+INSERT INTO `listadeleitura` (`AreaTematica_AreaTemID`, `Utente_NumUtente`, `ListaDeLeitura_ID`, `Nome`, `Criterio`) VALUES
+(2, 10, 1, 'Hacking', NULL),
+(8, 6, 2, 'How to Linux', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -210,6 +397,14 @@ CREATE TABLE `listalivroed` (
   `ListaDeLeitura_ListaDeLeitura_ID_` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `listalivroed`
+--
+
+INSERT INTO `listalivroed` (`LivroEdicao_Livro_Publicacao_PubID_`, `LivroEdicao_NumEdicao_`, `ListaDeLeitura_ListaDeLeitura_ID_`) VALUES
+(1, 2, 1),
+(3, 1, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -219,6 +414,15 @@ CREATE TABLE `listalivroed` (
 CREATE TABLE `livro` (
   `Publicacao_PubID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `livro`
+--
+
+INSERT INTO `livro` (`Publicacao_PubID`) VALUES
+(1),
+(3),
+(5);
 
 -- --------------------------------------------------------
 
@@ -234,6 +438,14 @@ CREATE TABLE `livroedicao` (
   `NumEdicao` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `livroedicao`
+--
+
+INSERT INTO `livroedicao` (`Livro_Publicacao_PubID`, `EstadoDeConservacao_EstadoID`, `RFID_NumRFID`, `ISBN`, `NumEdicao`) VALUES
+(1, 3, 1, 432, 2),
+(3, 3, 2, 332, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -246,6 +458,13 @@ CREATE TABLE `monografia` (
   `RFID_NumRFID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `monografia`
+--
+
+INSERT INTO `monografia` (`Publicacao_PubID`, `EstadoDeConservacao_EstadoID`, `RFID_NumRFID`) VALUES
+(10, 1, 7);
+
 -- --------------------------------------------------------
 
 --
@@ -256,6 +475,22 @@ CREATE TABLE `palavrachave` (
   `PalavraChaveID` int(11) NOT NULL,
   `PalavraChave` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `palavrachave`
+--
+
+INSERT INTO `palavrachave` (`PalavraChaveID`, `PalavraChave`) VALUES
+(1, 'Customizable'),
+(2, 'dynamic'),
+(3, 'migration'),
+(4, 'policy'),
+(5, 'national'),
+(6, 'interface'),
+(7, 'secondary'),
+(8, 'impactful'),
+(9, 'open system'),
+(10, 'leading edge');
 
 -- --------------------------------------------------------
 
@@ -269,6 +504,15 @@ CREATE TABLE `palavrachaveartigo` (
   `PalavraChave_PalavraChaveID_` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `palavrachaveartigo`
+--
+
+INSERT INTO `palavrachaveartigo` (`Artigo_Periodico_Publicacao_PubID_`, `Artigo_ArtigoID_`, `PalavraChave_PalavraChaveID_`) VALUES
+(5, 1, 5),
+(7, 2, 2),
+(7, 2, 10);
+
 -- --------------------------------------------------------
 
 --
@@ -281,6 +525,14 @@ CREATE TABLE `palavrachavecap` (
   `PalavraChave_PalavraChaveID_` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `palavrachavecap`
+--
+
+INSERT INTO `palavrachavecap` (`Capitulo_Livro_Publicacao_PubID_`, `Capitulo_NumCap_`, `PalavraChave_PalavraChaveID_`) VALUES
+(1, 3, 4),
+(1, 3, 5);
+
 -- --------------------------------------------------------
 
 --
@@ -291,6 +543,14 @@ CREATE TABLE `palavrachavepub` (
   `Publicacao_PubID_` int(11) NOT NULL,
   `PalavraChave_PalavraChaveID_` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `palavrachavepub`
+--
+
+INSERT INTO `palavrachavepub` (`Publicacao_PubID_`, `PalavraChave_PalavraChaveID_`) VALUES
+(1, 8),
+(2, 5);
 
 -- --------------------------------------------------------
 
@@ -303,6 +563,17 @@ CREATE TABLE `pedido` (
   `PublicacaoEmprestavel_Publicacao_PubID_` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `pedido`
+--
+
+INSERT INTO `pedido` (`Utente_NumUtente_`, `PublicacaoEmprestavel_Publicacao_PubID_`) VALUES
+(14, 1),
+(17, 1),
+(19, 4),
+(20, 1),
+(20, 4);
+
 -- --------------------------------------------------------
 
 --
@@ -310,8 +581,19 @@ CREATE TABLE `pedido` (
 --
 
 CREATE TABLE `periodicidade` (
-  `PeriodicidadeID` int(11) NOT NULL
+  `PeriodicidadeID` int(11) NOT NULL,
+  `Periodicidade` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `periodicidade`
+--
+
+INSERT INTO `periodicidade` (`PeriodicidadeID`, `Periodicidade`) VALUES
+(1, 'Diariamente'),
+(2, 'Semanalmente'),
+(3, 'Mensalmente'),
+(4, 'Anualmente');
 
 -- --------------------------------------------------------
 
@@ -324,6 +606,14 @@ CREATE TABLE `periodico` (
   `Periodicidade_PeriodicidadeID` int(11) NOT NULL,
   `ISSN` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `periodico`
+--
+
+INSERT INTO `periodico` (`Publicacao_PubID`, `Periodicidade_PeriodicidadeID`, `ISSN`) VALUES
+(5, 2, 322),
+(7, 3, 321);
 
 -- --------------------------------------------------------
 
@@ -338,6 +628,14 @@ CREATE TABLE `periodicoedicao` (
   `NumEdicao` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `periodicoedicao`
+--
+
+INSERT INTO `periodicoedicao` (`Periodico_Publicacao_PubID`, `EstadoDeConservacao_EstadoID`, `RFID_NumRFID`, `NumEdicao`) VALUES
+(5, 1, 4, 1),
+(7, 2, 5, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -349,6 +647,13 @@ CREATE TABLE `periodo` (
   `DataFim` date DEFAULT NULL,
   `PeriodoID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `periodo`
+--
+
+INSERT INTO `periodo` (`DataInicio`, `DataFim`, `PeriodoID`) VALUES
+('2021-10-20', '2022-11-16', 1);
 
 -- --------------------------------------------------------
 
@@ -362,6 +667,13 @@ CREATE TABLE `periodosuspensao` (
   `NumSuspensao` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `periodosuspensao`
+--
+
+INSERT INTO `periodosuspensao` (`Utente_NumUtente_`, `Periodo_PeriodoID_`, `NumSuspensao`) VALUES
+(10, 1, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -369,8 +681,17 @@ CREATE TABLE `periodosuspensao` (
 --
 
 CREATE TABLE `piso` (
-  `PisoID` int(11) NOT NULL
+  `PisoID` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `piso`
+--
+
+INSERT INTO `piso` (`PisoID`) VALUES
+(1),
+(2),
+(3);
 
 -- --------------------------------------------------------
 
@@ -383,8 +704,29 @@ CREATE TABLE `prateleira` (
   `Armario_Piso_PisoID` int(11) NOT NULL,
   `Armario_ArmarioID` int(11) NOT NULL,
   `Capacidade` int(11) NOT NULL DEFAULT 0,
-  `PrateleiraID` int(11) NOT NULL
+  `PrateleiraID` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `prateleira`
+--
+
+INSERT INTO `prateleira` (`AreaTematica_AreaTemID`, `Armario_Piso_PisoID`, `Armario_ArmarioID`, `Capacidade`, `PrateleiraID`) VALUES
+(7, 1, 3, 67, 9),
+(9, 1, 5, 97, 8),
+(5, 1, 7, 32, 5),
+(4, 1, 7, 47, 15),
+(7, 1, 9, 97, 2),
+(1, 1, 9, 68, 4),
+(5, 1, 9, 30, 6),
+(7, 2, 1, 50, 13),
+(8, 2, 1, 65, 14),
+(5, 2, 6, 73, 1),
+(5, 2, 6, 53, 11),
+(1, 2, 10, 75, 3),
+(1, 2, 10, 84, 12),
+(4, 3, 8, 66, 7),
+(2, 3, 8, 76, 10);
 
 -- --------------------------------------------------------
 
@@ -397,6 +739,16 @@ CREATE TABLE `pubautor` (
   `Autor_AutorID_` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `pubautor`
+--
+
+INSERT INTO `pubautor` (`Publicacao_PubID_`, `Autor_AutorID_`) VALUES
+(1, 3),
+(3, 5),
+(4, 4),
+(6, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -405,7 +757,7 @@ CREATE TABLE `pubautor` (
 
 CREATE TABLE `publicacao` (
   `Editora_EditID` int(11) NOT NULL,
-  `Capa_CapaID` int(11) NOT NULL,
+  `Capa_CapaID` int(11) DEFAULT NULL,
   `Prateleira_Armario_Piso_PisoID` int(11) NOT NULL,
   `Prateleira_Armario_ArmarioID` int(11) NOT NULL,
   `Prateleira_PrateleiraID` int(11) NOT NULL,
@@ -422,6 +774,22 @@ CREATE TABLE `publicacao` (
   `Emprestavel` bit(1) NOT NULL DEFAULT b'0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `publicacao`
+--
+
+INSERT INTO `publicacao` (`Editora_EditID`, `Capa_CapaID`, `Prateleira_Armario_Piso_PisoID`, `Prateleira_Armario_ArmarioID`, `Prateleira_PrateleiraID`, `PubID`, `Titulo`, `Subtitulo`, `Titulo_Abreviado`, `Descricao`, `NumPaginas`, `DataPub`, `NumEmp`, `DataAqui`, `TipoPublicacao_TipoPubID`, `Emprestavel`) VALUES
+(6, 1, 2, 6, 1, 1, 'Mr. Average', 'subtitulo102', 'titulo_abreviado115', 'Innovative responsive structure', 599, '0000-00-00', 95722, '0000-00-00', 1, b'1'),
+(7, 2, 2, 6, 1, 2, 'Laramie Project, The', 'subtitulo215', 'titulo_abreviado543', 'Decentralized discrete archive', 311, '0000-00-00', 27579, '0000-00-00', 4, b'1'),
+(4, 3, 2, 6, 1, 3, 'Three Kingdoms: Resurrection of the Dragon (Saam gwok dzi gin lung se gap)', 'subtitulo155', 'titulo_abreviado218', 'Networked 24 hour toolset', 441, '0000-00-00', 85170, '0000-00-00', 3, b'0'),
+(2, 4, 2, 6, 1, 4, 'Gran Paradiso', 'subtitulo117', 'titulo_abreviado043', 'Managed 5th generation capability', 602, '0000-00-00', 61103, '0000-00-00', 3, b'0'),
+(8, 5, 2, 6, 1, 5, 'Promised Land', 'subtitulo642', 'titulo_abreviado252', 'Re-contextualized heuristic policy', 131, '0000-00-00', 93352, '0000-00-00', 5, b'0'),
+(7, 6, 2, 6, 1, 6, 'Run If You Can', 'subtitulo393', 'titulo_abreviado167', 'Upgradable context-sensitive help-desk', 129, '0000-00-00', 22710, '0000-00-00', 4, b'1'),
+(3, 7, 2, 6, 1, 7, 'Tactical Force', 'subtitulo004', 'titulo_abreviado747', 'User-friendly scalable extranet', 849, '0000-00-00', 65947, '0000-00-00', 3, b'1'),
+(2, 8, 2, 6, 1, 8, 'Set-Up, The', 'subtitulo964', 'titulo_abreviado229', 'Advanced regional utilisation', 66, '0000-00-00', 49090, '0000-00-00', 6, b'1'),
+(6, 9, 2, 6, 1, 9, 'Ultramarines: A Warhammer 40,000 Movie', 'subtitulo454', 'titulo_abreviado926', 'Vision-oriented non-volatile capability', 465, '0000-00-00', 37068, '0000-00-00', 2, b'0'),
+(1, 10, 2, 6, 1, 10, 'Who Is Killing the Great Chefs of Europe?', 'subtitulo353', 'titulo_abreviado407', 'Function-based zero defect process improvement', 4, '0000-00-00', 41952, '0000-00-00', 1, b'0');
+
 -- --------------------------------------------------------
 
 --
@@ -434,6 +802,15 @@ CREATE TABLE `publicacaoarea` (
   `Relevancia_RelID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `publicacaoarea`
+--
+
+INSERT INTO `publicacaoarea` (`Publicacao_PubID_`, `AreaTematica_AreaTemID_`, `Relevancia_RelID`) VALUES
+(1, 9, 2),
+(7, 8, 3),
+(6, 2, 5);
+
 -- --------------------------------------------------------
 
 --
@@ -443,8 +820,16 @@ CREATE TABLE `publicacaoarea` (
 CREATE TABLE `publicacaoemprestavel` (
   `Publicacao_PubID` int(11) NOT NULL,
   `ValorExtravio` int(11) DEFAULT NULL,
-  `Requisitado` bit(1) DEFAULT NULL
+  `Requisitado` bit(1) DEFAULT b'0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `publicacaoemprestavel`
+--
+
+INSERT INTO `publicacaoemprestavel` (`Publicacao_PubID`, `ValorExtravio`, `Requisitado`) VALUES
+(1, 15, b'0'),
+(4, 30, b'1');
 
 -- --------------------------------------------------------
 
@@ -456,6 +841,13 @@ CREATE TABLE `relatoriostecnicos` (
   `Monografia_Publicacao_PubID` int(11) NOT NULL,
   `Tema_TemaID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `relatoriostecnicos`
+--
+
+INSERT INTO `relatoriostecnicos` (`Monografia_Publicacao_PubID`, `Tema_TemaID`) VALUES
+(10, 4);
 
 -- --------------------------------------------------------
 
@@ -490,6 +882,14 @@ CREATE TABLE `reserva` (
   `ReservaNum` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `reserva`
+--
+
+INSERT INTO `reserva` (`Pedido_Utente_NumUtente_`, `Pedido_PublicacaoEmprestavel_Publicacao_PubID_`, `ReservaNum`) VALUES
+(14, 1, 1),
+(20, 4, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -501,6 +901,14 @@ CREATE TABLE `revista` (
   `NumBloqueadas` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `revista`
+--
+
+INSERT INTO `revista` (`Periodico_Publicacao_PubID`, `NumBloqueadas`) VALUES
+(5, 1),
+(7, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -508,13 +916,25 @@ CREATE TABLE `revista` (
 --
 
 CREATE TABLE `rfid` (
-  `PeriodicoEdicao_Periodico_Publicacao_PubID` int(11) NOT NULL,
-  `PeriodicoEdicao_NumEdicao` int(11) NOT NULL,
-  `Monografia_Publicacao_PubID` int(11) NOT NULL,
-  `LivroEdicao_Livro_Publicacao_PubID` int(11) NOT NULL,
-  `LivroEdicao_NumEdicao` int(11) NOT NULL,
-  `NumRFID` int(11) NOT NULL
+  `NumRFID` int(11) NOT NULL,
+  `isUsed` bit(1) NOT NULL DEFAULT b'0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `rfid`
+--
+
+INSERT INTO `rfid` (`NumRFID`, `isUsed`) VALUES
+(1, b'0'),
+(2, b'0'),
+(3, b'0'),
+(4, b'0'),
+(5, b'0'),
+(6, b'0'),
+(7, b'0'),
+(8, b'0'),
+(9, b'0'),
+(10, b'0');
 
 -- --------------------------------------------------------
 
@@ -527,6 +947,22 @@ CREATE TABLE `tema` (
   `Tema` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tema`
+--
+
+INSERT INTO `tema` (`TemaID`, `Tema`) VALUES
+(1, 'Sterna paradisaea'),
+(2, 'Gyps bengalensis'),
+(3, 'Ardea golieth'),
+(4, 'Suricata suricatta'),
+(5, 'Kobus vardonii vardoni'),
+(6, 'Varanus komodensis'),
+(7, 'Drymarchon corias couperi'),
+(8, 'Crotalus adamanteus'),
+(9, 'Terrapene carolina'),
+(10, 'Dendrocitta vagabunda');
+
 -- --------------------------------------------------------
 
 --
@@ -538,6 +974,13 @@ CREATE TABLE `textospedagocicos` (
   `Tema_TemaID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `textospedagocicos`
+--
+
+INSERT INTO `textospedagocicos` (`Monografia_Publicacao_PubID`, `Tema_TemaID`) VALUES
+(10, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -546,8 +989,39 @@ CREATE TABLE `textospedagocicos` (
 
 CREATE TABLE `tipo` (
   `TipoID` int(11) NOT NULL,
-  `Tipo` text NOT NULL
+  `Tipo` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tipo`
+--
+
+INSERT INTO `tipo` (`TipoID`, `Tipo`) VALUES
+(1, 'Mestrado'),
+(2, 'Doutoramento');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tipopublicacao`
+--
+
+CREATE TABLE `tipopublicacao` (
+  `TipoPubID` int(11) NOT NULL,
+  `Tipo` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tipopublicacao`
+--
+
+INSERT INTO `tipopublicacao` (`TipoPubID`, `Tipo`) VALUES
+(1, 'Livro'),
+(2, 'Dissertação (Monografia)'),
+(3, 'Relatórios Técnicos (Monografia)'),
+(4, 'Textos Pedagógicos (Monografia)'),
+(5, 'Jornal (Periodico)'),
+(6, 'Revista (Periodico)');
 
 -- --------------------------------------------------------
 
@@ -563,6 +1037,32 @@ CREATE TABLE `utente` (
   `Telefone` int(11) NOT NULL,
   `Email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `utente`
+--
+
+INSERT INTO `utente` (`NumUtente`, `Nome`, `NumId`, `Morada`, `Telefone`, `Email`) VALUES
+(1, 'Feodor', 78004590, '80927 Blaine Plaza', 960566240, 'fblankhorn0@infoseek.co.jp'),
+(2, 'Berkie', 86825478, '92863 Cherokee Avenue', 969004980, 'bmensler1@delicious.com'),
+(3, 'Casandra', 50776365, '52 Alpine Road', 960142068, 'cwillan2@theguardian.com'),
+(4, 'Sonnnie', 33949929, '8 Cambridge Street', 964400658, 'smanjin3@mysql.com'),
+(5, 'Terrill', 87994014, '3 Gulseth Parkway', 965462201, 'treay4@vistaprint.com'),
+(6, 'Nefen', 10889286, '4915 Porter Park', 968592369, 'nnerger5@epa.gov'),
+(7, 'Suzann', 91689344, '641 Hayes Drive', 966615063, 'stomet6@jalbum.net'),
+(8, 'Phylys', 78696797, '9273 Dakota Plaza', 960712587, 'ppentycross7@about.me'),
+(9, 'Reinald', 60191897, '49 Dunning Junction', 963768622, 'rsnelgrove8@multiply.com'),
+(10, 'Carlos', 72024574, '20447 Red Cloud Lane', 960100136, 'cboyle9@a8.net'),
+(11, 'Fionnula', 21360928, '5 Judy Court', 960682040, 'fbrewarda@wired.com'),
+(12, 'Gabbie', 1814720, '4 David Street', 961954564, 'gsheddb@qq.com'),
+(13, 'Kakalina', 66870997, '2928 Tomscot Terrace', 965802237, 'kmaugerc@goodreads.com'),
+(14, 'Florencia', 82110061, '659 Crest Line Park', 969960972, 'ffeatherbied@blogs.com'),
+(15, 'Kori', 22078739, '661 Eastwood Road', 962973286, 'kheinleine@infoseek.co.jp'),
+(16, 'Ramonda', 22911149, '8116 Dwight Crossing', 966644899, 'randrassyf@mediafire.com'),
+(17, 'Alwyn', 98391284, '54 Reindahl Park', 964827530, 'abaynhamg@oakley.com'),
+(18, 'Anatol', 82922342, '5965 Corry Pass', 960372348, 'achillesh@about.com'),
+(19, 'Miguelita', 36857173, '78 Bellgrove Drive', 969190382, 'mwalklatei@instagram.com'),
+(20, 'Abra', 27083695, '24119 Grayhawk Parkway', 960824855, 'athebeauj@whitehouse.gov');
 
 --
 -- Indexes for dumped tables
@@ -602,7 +1102,8 @@ ALTER TABLE `autor`
 ALTER TABLE `capa`
   ADD PRIMARY KEY (`CapaID`),
   ADD UNIQUE KEY `Miniatura` (`Miniatura`),
-  ADD UNIQUE KEY `Ampliada` (`Ampliada`);
+  ADD UNIQUE KEY `Ampliada` (`Ampliada`),
+  ADD KEY `FK_PubID` (`Publicacao_PubID`);
 
 --
 -- Indexes for table `capitulo`
@@ -656,8 +1157,7 @@ ALTER TABLE `estadodeconservacao`
 -- Indexes for table `feeds`
 --
 ALTER TABLE `feeds`
-  ADD PRIMARY KEY (`FeedID`),
-  ADD UNIQUE KEY `Editora_EditID` (`Editora_EditID`);
+  ADD PRIMARY KEY (`FeedID`);
 
 --
 -- Indexes for table `jornal`
@@ -803,6 +1303,7 @@ ALTER TABLE `pubautor`
 ALTER TABLE `publicacao`
   ADD PRIMARY KEY (`PubID`),
   ADD UNIQUE KEY `PubID` (`PubID`),
+  ADD UNIQUE KEY `Capa_CapaID` (`Capa_CapaID`),
   ADD KEY `FK_Publicacao_noname_Editora` (`Editora_EditID`),
   ADD KEY `FK_Publicacao_noname_Capa` (`Capa_CapaID`),
   ADD KEY `FK_Publicacao_noname_Prateleira` (`Prateleira_Armario_Piso_PisoID`,`Prateleira_Armario_ArmarioID`,`Prateleira_PrateleiraID`),
@@ -851,10 +1352,7 @@ ALTER TABLE `revista`
 -- Indexes for table `rfid`
 --
 ALTER TABLE `rfid`
-  ADD PRIMARY KEY (`NumRFID`),
-  ADD KEY `FK_RFID_noname_PeriodicoEdicao` (`PeriodicoEdicao_Periodico_Publicacao_PubID`,`PeriodicoEdicao_NumEdicao`),
-  ADD KEY `FK_RFID_noname_Monografia` (`Monografia_Publicacao_PubID`),
-  ADD KEY `FK_RFID_noname_LivroEdicao` (`LivroEdicao_Livro_Publicacao_PubID`,`LivroEdicao_NumEdicao`);
+  ADD PRIMARY KEY (`NumRFID`);
 
 --
 -- Indexes for table `tema`
@@ -874,6 +1372,12 @@ ALTER TABLE `textospedagocicos`
 --
 ALTER TABLE `tipo`
   ADD PRIMARY KEY (`TipoID`);
+
+--
+-- Indexes for table `tipopublicacao`
+--
+ALTER TABLE `tipopublicacao`
+  ADD PRIMARY KEY (`TipoPubID`);
 
 --
 -- Indexes for table `utente`
@@ -1036,8 +1540,8 @@ ALTER TABLE `periodosuspensao`
 -- Constraints for table `prateleira`
 --
 ALTER TABLE `prateleira`
-  ADD CONSTRAINT `FK_Prateleira_noname_AreaTematica` FOREIGN KEY (`AreaTematica_AreaTemID`) REFERENCES `areatematica` (`AreaTemID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_Prateleira_noname_Armario` FOREIGN KEY (`Armario_Piso_PisoID`,`Armario_ArmarioID`) REFERENCES `armario` (`Piso_PisoID`, `ArmarioID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_Prateleira_noname_AreaTematica` FOREIGN KEY (`AreaTematica_AreaTemID`) REFERENCES `areatematica` (`AreaTemID`),
+  ADD CONSTRAINT `FK_Prateleira_noname_Armario` FOREIGN KEY (`Armario_Piso_PisoID`,`Armario_ArmarioID`) REFERENCES `armario` (`Piso_PisoID`, `ArmarioID`);
 
 --
 -- Constraints for table `pubautor`
@@ -1087,14 +1591,6 @@ ALTER TABLE `reserva`
 --
 ALTER TABLE `revista`
   ADD CONSTRAINT `FK_Revista_Periodico` FOREIGN KEY (`Periodico_Publicacao_PubID`) REFERENCES `periodico` (`Publicacao_PubID`) ON UPDATE CASCADE;
-
---
--- Constraints for table `rfid`
---
-ALTER TABLE `rfid`
-  ADD CONSTRAINT `FK_RFID_noname_LivroEdicao` FOREIGN KEY (`LivroEdicao_Livro_Publicacao_PubID`,`LivroEdicao_NumEdicao`) REFERENCES `livroedicao` (`Livro_Publicacao_PubID`, `NumEdicao`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_RFID_noname_Monografia` FOREIGN KEY (`Monografia_Publicacao_PubID`) REFERENCES `monografia` (`Publicacao_PubID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_RFID_noname_PeriodicoEdicao` FOREIGN KEY (`PeriodicoEdicao_Periodico_Publicacao_PubID`,`PeriodicoEdicao_NumEdicao`) REFERENCES `periodicoedicao` (`Periodico_Publicacao_PubID`, `NumEdicao`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `textospedagocicos`

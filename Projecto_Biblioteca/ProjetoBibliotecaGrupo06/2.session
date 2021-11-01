@@ -1,0 +1,12 @@
+window_sizes 1920 1001 450 1464 819 128
+
+diagrams
+  active  classdiagram_ref 128022 // Projecto Biblioteca
+    1464 819 57 A0-Landscape 24 165
+end
+show_stereotypes
+selected attribute_ref 128002 // Usado
+open
+  class_ref 166038 // RFID
+end
+end
