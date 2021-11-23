@@ -1,0 +1,15 @@
+window_sizes 1920 1017 214 1701 867 104
+
+diagrams
+  active  classdiagram_ref 128150 // CP1_Desafio4_Grupo6
+    1701 867 200 A4 0 0
+end
+show_stereotypes
+selected attribute_ref 128790 // Nome
+open
+  class_ref 128150 // Cliente
+  class_ref 128278 // Premier
+  class_ref 128406 // Gestor
+  class_ref 128534 // Agência
+end
+end

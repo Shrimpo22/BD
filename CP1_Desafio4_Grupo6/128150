@@ -1,7 +1,7 @@
 format 224
 "CP1_Desafio4_Grupo6" // CP1_Desafio4_Grupo6
-  revision 1
-  modified_by 22 "vascoaraujo"
+  revision 2
+  modified_by 22 "vasco"
   // class settings
   
   classdiagramsettings member_max_width 0 end
@@ -51,7 +51,7 @@ format 224
     activitydiagramsettings
      end
     classdiagram 128150 "CP1_Desafio4_Grupo6"
-      classdiagramsettings member_max_width 0 end
+      classdiagramsettings show_members_full_definition yes show_members_stereotype yes member_max_width 0 end
       size A4
     end
 
@@ -65,6 +65,47 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
+      classrelation 135446 // <association>
+	relation 135062 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 135446 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 135574 // <association>
+      end
+
+      attribute 128022 "Cliente_ID"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128150 "Premier"
+	private explicit_type "boolean"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128662 "Nome"
+	private explicit_type "varchar(100)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
     end
 
     class 128278 "Premier"
@@ -107,8 +148,35 @@ format 224
 	    classrelation_ref 128406 // <association>
       end
 
-      classrelation 128662 // <aggregation>
-	relation_ref 128406 // <aggregation>
+      classrelation 135190 // <association>
+	relation 134934 ----
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 135190 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 135318 // <association>
+      end
+
+      attribute 128406 "Gestor_ID"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128534 "Nome"
+	private explicit_type "varchar(100)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
@@ -122,12 +190,35 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 128534 // <aggregation>
-	relation 128406 o---
-	  a role_name "" multiplicity "*" private
-	    classrelation_ref 128534 // <aggregation>
-	  b role_name "" multiplicity "1" private
-	    classrelation_ref 128662 // <aggregation>
+      classrelation 135318 // <association>
+	relation_ref 134934 // <association>
+      end
+
+      classrelation 135574 // <association>
+	relation_ref 135062 // <association>
+      end
+
+      attribute 128278 "Agencia_ID"
+	private explicit_type "int"
+	stereotype "primary key"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128790 "Nome"
+	private explicit_type "varchar(100)"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
   end

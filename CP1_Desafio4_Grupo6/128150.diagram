@@ -2,19 +2,19 @@ format 224
 
 classcanvas 128022 class_ref 128150 // Cliente
   classdiagramsettings member_max_width 0 end
-  xyz 97 103 2000
+  xyz 315 79 2000
 end
 classcanvas 128150 class_ref 128278 // Premier
   classdiagramsettings member_max_width 0 end
-  xyz 227 103 2000
+  xyz 92.5 92 2000
 end
 classcanvas 128278 class_ref 128406 // Gestor
   classdiagramsettings member_max_width 0 end
-  xyz 382 104 2000
+  xyz 37 269.5 2000
 end
 classcanvas 128406 class_ref 128534 // Agência
   classdiagramsettings member_max_width 0 end
-  xyz 379 280 2000
+  xyz 311.5 270.5 2000
 end
 relationcanvas 128534 relation_ref 128150 // <generalisation>
   from ref 128150 z 2001 to ref 128022
@@ -24,11 +24,16 @@ end
 relationcanvas 128662 relation_ref 128278 // <association>
   from ref 128278 z 2001 to ref 128150
   no_role_a no_role_b
-  multiplicity_a_pos 289 125 3000 multiplicity_b_pos 353 125 3000
+  multiplicity_a_pos 111 134 3000 multiplicity_b_pos 97 256 3000
 end
-relationcanvas 128790 relation_ref 128406 // <aggregation>
-  from ref 128406 z 2001 to ref 128278
+relationcanvas 128918 relation_ref 134934 // <association>
+  from ref 128278 z 2001 to ref 128406
   no_role_a no_role_b
-  multiplicity_a_pos 391 143 3000 multiplicity_b_pos 389 265 3000
+  multiplicity_a_pos 301 307 3000 multiplicity_b_pos 208 307 3000
+end
+relationcanvas 129046 relation_ref 135062 // <association>
+  from ref 128022 z 2001 to ref 128406
+  no_role_a no_role_b
+  multiplicity_a_pos 387 257 3000 multiplicity_b_pos 389 160 3000
 end
 end
